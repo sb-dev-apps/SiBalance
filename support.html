@@ -4,18 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SiBalance Support</title>
+
+    <style>
+        :root {
+            --text: #1d1d1f;
+            --secondary: #6e6e73;
+            --link: #0071e3;
+            --border: #d2d2d7;
+            --background: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                         "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            font-size: 17px;
+        }
+
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p,
+        li {
+            color: var(--text);
+        }
+
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 3rem 0;
+        }
+
+        ul,
+        ol {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 4rem;
+            color: var(--secondary);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 2.3rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<main class="container">
+<main>
+
     <h1>SiBalance Support</h1>
 
     <p>Help and support for SiBalance.</p>
 
-    <p>
-        If you need help using SiBalance, have a question about subscriptions,
-        would like to report a bug, or have a feature suggestion, please get in touch.
-    </p>
+    <p>If you need help using SiBalance, have a question about subscriptions, would like to report a bug, or have a feature suggestion, please get in touch.</p>
 
     <hr>
 
@@ -62,21 +164,27 @@
         <li>Navigate to the Premium screen.</li>
         <li>Tap <strong>Restore Purchases</strong>.</li>
     </ol>
+
     <p>Any active subscription associated with your Apple ID will be restored automatically.</p>
 
     <h3>How do I cancel my subscription?</h3>
+
     <p>Subscriptions are managed directly through Apple.</p>
+
     <ol>
-        <li>Open the <strong>Settings</strong> app on your iPhone or iPad.</li>
-        <li>Tap your Apple ID at the top of the screen.</li>
-        <li>Tap <strong>Subscriptions</strong>.</li>
-        <li>Select <strong>SiBalance</strong>.</li>
-        <li>Choose <strong>Cancel Subscription</strong>.</li>
+        <li>Open the Settings app on your iPhone or iPad.</li>
+        <li>Tap your Apple ID.</li>
+        <li>Tap Subscriptions.</li>
+        <li>Select SiBalance.</li>
+        <li>Choose Cancel Subscription.</li>
     </ol>
+
     <p>You will continue to have access until the end of the current billing period.</p>
 
     <h3>Does SiBalance use ads or analytics?</h3>
+
     <p>No. SiBalance does not use:</p>
+
     <ul>
         <li>Advertising services</li>
         <li>Third-party analytics</li>
@@ -84,12 +192,13 @@
         <li>Tracking technologies</li>
         <li>Data brokers</li>
     </ul>
+
     <p>Your budgeting information remains private.</p>
 
     <h3>Can I use multiple budgets?</h3>
+
     <p>Yes. SiBalance Premium supports multiple budgets, allowing you to manage separate financial plans independently.</p>
 
-    <p>Examples include:</p>
     <ul>
         <li>Personal budget</li>
         <li>Household budget</li>
@@ -98,40 +207,52 @@
     </ul>
 
     <h3>Does SiBalance support Face ID?</h3>
+
     <p>Yes. You can enable Face ID or device passcode protection from:</p>
+
     <p><strong>Settings → Security &amp; Backup</strong></p>
 
     <h3>How do I delete my data?</h3>
+
     <p><strong>Settings → Data → Delete Data</strong></p>
+
     <p>Deleting data permanently removes all budget information stored within the app.</p>
+
     <p><strong>This action cannot be undone.</strong></p>
 
     <h3>How do I enable Reduce Motion?</h3>
+
     <p>SiBalance supports Apple's accessibility settings.</p>
+
     <ol>
-        <li>Open the <strong>Settings</strong> app on your iPhone.</li>
-        <li>Tap <strong>Accessibility</strong>.</li>
-        <li>Tap <strong>Motion</strong>.</li>
-        <li>Turn on <strong>Reduce Motion</strong>.</li>
+        <li>Open Settings.</li>
+        <li>Tap Accessibility.</li>
+        <li>Tap Motion.</li>
+        <li>Enable Reduce Motion.</li>
     </ol>
+
     <p>SiBalance automatically respects this setting.</p>
 
     <hr>
 
     <h2>User Guide</h2>
-    <p>The complete SiBalance User Guide is available here:</p>
-    <p><a href="/user-guide">View User Guide</a></p>
+
+    <p>
+        <a href="https://sibalance.app/user-guide">View User Guide</a>
+    </p>
 
     <hr>
 
     <h2>Privacy Policy</h2>
-    <p>You can read the SiBalance iOS Privacy Policy here:</p>
-    <p><a href="/privacy">View Privacy Policy</a></p>
+
+    <p>
+        <a href="https://sibalance.app/privacy">View Privacy Policy</a>
+    </p>
 
     <hr>
 
     <h2>Response Times</h2>
-    <p>We aim to respond to support requests as quickly as possible.</p>
+
     <p>Most support enquiries receive a response within 1–3 business days.</p>
 
     <hr>
@@ -150,9 +271,10 @@
 
     <p>All while keeping your data private.</p>
 
-    <hr>
+    <footer>
+        © 2026 Simon Brown. All rights reserved.
+    </footer>
 
-    <p>&copy; 2026 Simon Brown. All rights reserved.</p>
 </main>
 
 </body>
