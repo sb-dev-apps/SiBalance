@@ -7,13 +7,12 @@
 
   <style>
     :root {
-      --ink: #10251f;
-      --muted: #5d6f68;
-      --line: #d9e7df;
-      --brand: #0f7f5f;
-      --brand-dark: #07533e;
-      --accent: #2f6fed;
-      --wash: #f4faf7;
+      --ink: #071734;
+      --muted: #5f6f91;
+      --line: #dbe5ff;
+      --brand: #12cfe3;
+      --accent: #bd39ef;
+      --wash: #f5f8ff;
     }
 
     * {
@@ -26,7 +25,10 @@
       padding: 0;
       line-height: 1.6;
       color: var(--ink);
-      background: linear-gradient(180deg, var(--wash) 0, #fff 300px);
+      background:
+        radial-gradient(circle at 16% 12%, rgba(189, 57, 239, 0.14), transparent 28%),
+        radial-gradient(circle at 82% 6%, rgba(18, 207, 227, 0.14), transparent 30%),
+        linear-gradient(180deg, var(--wash) 0, #fff 360px);
     }
 
     .page {
@@ -52,17 +54,11 @@
     }
 
     .app-mark {
-      display: grid;
-      place-items: center;
       width: 42px;
       height: 42px;
-      border-radius: 8px;
-      color: #fff;
-      background: var(--brand);
-      box-shadow: 0 10px 24px rgba(15, 127, 95, 0.2);
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 0;
+      border-radius: 9px;
+      box-shadow: 0 12px 28px rgba(7, 23, 52, 0.18);
+      object-fit: cover;
     }
 
     nav {
@@ -77,7 +73,7 @@
       border-radius: 8px;
       padding: 34px;
       background: #fff;
-      box-shadow: 0 18px 40px rgba(16, 37, 31, 0.06);
+      box-shadow: 0 18px 40px rgba(7, 23, 52, 0.07);
     }
 
     h1,
@@ -147,7 +143,7 @@
   <div class="page">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="SiBalance home">
-        <span class="app-mark">S</span>
+        <img class="app-mark" src="assets/sibalance-logo.png" alt="" width="42" height="42">
         <span>SiBalance</span>
       </a>
 
