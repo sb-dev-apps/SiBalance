@@ -190,7 +190,16 @@
     Safe To Spend helps you understand how much money is available after your
     budget commitments are considered.
   </p>
-    <p>Depending on your budget, the calculation may include:</p>
+  <p>
+    It is designed to answer a practical question: how much can you safely spend
+    without putting this budget period under pressure?
+  </p>
+  <p>
+    Safe To Spend starts with your remaining budget balance, subtracts any active
+    safety buffer, then spreads the available amount across the remaining time in
+    the budget period.
+  </p>
+  <p>Depending on your budget, the calculation may include:</p>
   <ul>
     <li>Available balance</li>
     <li>Future income</li>
@@ -199,6 +208,55 @@
     <li>Safety buffer</li>
     <li>Available to spend</li>
   </ul>
+
+  <h3>Safe To Spend Period</h3>
+  <p>
+    You can choose how Safe To Spend is shown from
+    <strong>Settings &gt; Balance &gt; Safe to spend</strong>.
+  </p>
+  <p>Options include:</p>
+  <ul>
+    <li>Daily</li>
+    <li>Weekly</li>
+    <li>Fortnightly</li>
+    <li>Monthly</li>
+    <li>Match budget period</li>
+  </ul>
+  <p>
+    For example, if Safe To Spend is set to Weekly, the Dashboard and widgets
+    show the amount available for the current week. If it is set to Match budget
+    period, SiBalance shows the amount available for the rest of the current
+    budget period.
+  </p>
+  <p>
+    Safe To Spend settings are saved per budget. One budget can use Weekly while
+    another uses Daily, and SiBalance will remember the correct choice when you
+    switch between budgets.
+  </p>
+
+  <h3>Safety Buffer</h3>
+  <p>
+    The safety buffer lets you reserve part of your money before Safe To Spend is
+    calculated. This can help keep money aside for unexpected costs or simply
+    give your budget more breathing room.
+  </p>
+  <p>
+    If a safety buffer is active, Safe To Spend is calculated after that amount
+    has been reserved.
+  </p>
+
+  <hr>
+
+  <h2>Widgets</h2>
+  <p>
+    Safe To Spend widgets reflect the Safe To Spend period chosen for each budget.
+    If your budget is set to Weekly, the widget shows the weekly amount. If it is
+    set to Monthly, the widget shows the monthly amount.
+  </p>
+  <p>
+    Smaller Lock Screen widgets may show a compact amount only, while larger
+    widgets can show more context such as the selected period and budget status.
+  </p>
 
   <hr>
 
@@ -303,19 +361,38 @@
   <ul>
     <li><strong>Carry unused balance:</strong> add remaining balance to the next period</li>
     <li><strong>Always hide balance:</strong> keep totals hidden until you reveal them</li>
+    <li><strong>Safe to spend:</strong> choose whether Safe To Spend is shown daily, weekly, fortnightly, monthly, or for the matching budget period</li>
     <li><strong>Safety buffer:</strong> set money aside from Safe To Spend without changing your balance</li>
   </ul>
 
   <h3>Notifications</h3>
-  <p>Choose which budget reminders you want.</p>
+  <p>
+    SiBalance can send local reminders to help you keep on top of your budgets.
+    Notifications are optional and can be changed at any time from
+    <strong>Settings &gt; Notifications</strong>.
+  </p>
+  <p>
+    The daily Check-in reminder sends one reminder each day at your chosen time.
+    It is a simple prompt to open SiBalance and review your budget.
+  </p>
+  <p>SiBalance can also remind you about upcoming budget events:</p>
   <ul>
-    <li>Daily reminder</li>
-    <li>Payments due</li>
-    <li>Income due</li>
-    <li>Period ending</li>
-    <li>Reminder time</li>
-    <li>Due reminder timing</li>
+    <li><strong>Expense due:</strong> reminds you before saved expenses are due</li>
+    <li><strong>Income due:</strong> reminds you before expected income dates</li>
+    <li><strong>Period ending:</strong> reminds you before the current budget period ends</li>
   </ul>
+  <p>
+    You can choose how far in advance due reminders appear. This applies to
+    expense, income, and period ending reminders.
+  </p>
+  <p>
+    Notifications are created locally on your device. SiBalance does not send
+    your budget data to a server to create reminders.
+  </p>
+  <p>
+    If notifications do not appear, check that notifications are enabled for
+    SiBalance in iOS Settings.
+  </p>
 
   <h3>Appearance</h3>
   <p>Change the app's look and theme.</p>
