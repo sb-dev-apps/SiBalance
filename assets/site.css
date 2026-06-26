@@ -19,11 +19,12 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  color: var(--ink);
+  color: #f8fbff;
   background:
-    radial-gradient(circle at 16% 12%, rgba(189, 57, 239, 0.14), transparent 28%),
-    radial-gradient(circle at 82% 6%, rgba(18, 207, 227, 0.14), transparent 30%),
-    linear-gradient(180deg, var(--wash) 0, #fff 430px);
+    radial-gradient(circle at 18% 15%, rgba(35, 89, 220, 0.45), transparent 34%),
+    radial-gradient(circle at 78% 4%, rgba(18, 207, 227, 0.24), transparent 28%),
+    radial-gradient(circle at 82% 78%, rgba(189, 57, 239, 0.18), transparent 30%),
+    linear-gradient(180deg, #020817 0%, #071735 48%, #020817 100%);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -45,7 +46,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--ink);
+  color: #fff;
   font-weight: 700;
 }
 
@@ -64,21 +65,33 @@ nav {
   font-size: 15px;
 }
 
+nav a,
+footer a {
+  color: #c9d9ff;
+}
+
+nav a:hover,
+footer a:hover {
+  color: #35d6ff;
+}
+
 .document {
   max-width: 840px;
   margin: 0 auto;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(146, 183, 255, 0.22);
   border-radius: 8px;
   padding: 34px;
-  background: var(--panel);
-  box-shadow: 0 18px 40px rgba(7, 23, 52, 0.07);
+  color: #d8e3f8;
+  background: linear-gradient(180deg, rgba(30, 58, 125, 0.72), rgba(13, 31, 73, 0.74));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(18px);
 }
 
 .contents {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(146, 183, 255, 0.22);
   border-radius: 8px;
   padding: 18px;
-  background: #f8fbff;
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .contents h2 {
@@ -101,7 +114,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--ink);
+  color: #fff;
 }
 
 h1 {
@@ -111,11 +124,16 @@ h1 {
 .date,
 footer,
 .document footer {
-  color: var(--muted);
+  color: #9eb0d2;
+}
+
+.document p,
+.document li {
+  color: #d8e3f8;
 }
 
 a {
-  color: var(--accent);
+  color: #35d6ff;
   text-decoration: none;
   font-weight: 600;
 }
@@ -126,7 +144,7 @@ a:hover {
 
 hr {
   border: 0;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(146, 183, 255, 0.18);
 }
 
 @media (max-width: 720px) {
