@@ -108,6 +108,7 @@
             }
         }
     </style>
+    <script src="assets/theme.js"></script>
     <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -119,12 +120,19 @@
             <span>SiBalance</span>
         </a>
 
-        <nav aria-label="Site navigation">
-            <a href="support.html">Support</a>
-            <a href="user-guide.html">User Guide</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-        </nav>
+        <div class="header-actions">
+            <nav aria-label="Site navigation">
+                <a href="support.html">Support</a>
+                <a href="user-guide.html">User Guide</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </nav>
+
+            <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+                <span class="theme-toggle-icon" aria-hidden="true"></span>
+                <span class="theme-toggle-text">Dark</span>
+            </button>
+        </div>
     </header>
 
 <main class="document">
