@@ -86,7 +86,8 @@
 
     <main class="document">
   <h1>SiBalance User Guide</h1>
-  <p class="date">Last updated: June 2026</p>
+  <p class="date">Last updated: 30 June 2026</p>
+  <p class="date">Covers SiBalance 1.5.0 and later.</p>
 
   <p>
     Welcome to SiBalance. This guide explains how to set up your budget,
@@ -109,6 +110,7 @@
       <li><a href="#reports">Reports</a></li>
       <li><a href="#siri-and-app-shortcuts">Siri and App Shortcuts</a></li>
       <li><a href="#settings">Settings</a></li>
+      <li><a href="#backup-and-restore">Backup and Restore</a></li>
       <li><a href="#need-help">Need Help?</a></li>
     </ul>
   </section>
@@ -117,9 +119,14 @@
 
   <h2 id="getting-started">Getting Started</h2>
 
-  <h3>Create Your First Budget</h3>
-  <p>When you first open SiBalance, tap <strong>New Budget</strong>.</p>
-  <p>You can begin a free trial of SiBalance Premium or restore an existing purchase.</p>
+  <h3>Create or Restore Your First Budget</h3>
+  <p>When you first open SiBalance, choose how you want to begin.</p>
+  <ul>
+    <li><strong>Check iCloud Backup:</strong> look for existing SiBalance data in iCloud</li>
+    <li><strong>New Budget:</strong> start again with a new budget</li>
+    <li><strong>Restore Encrypted Backup:</strong> restore from a manual <strong>.sibackup</strong> file</li>
+  </ul>
+  <p>You can begin a free trial of SiBalance Premium or restore an existing purchase if a feature requires Premium.</p>
 
   <h3>Choose Your Currency</h3>
   <ul>
@@ -139,6 +146,16 @@
   <p>
     If you reinstall SiBalance or move to a new device, the app can automatically
     search for existing SiBalance data in iCloud and restore it during setup.
+  </p>
+  <p>
+    During setup, SiBalance shows clearer iCloud restore states such as checking,
+    found, not found, unavailable, and restoring. If an iCloud backup is found
+    but requires SiBalance Premium, the restore option will guide you through
+    Premium first.
+  </p>
+  <p>
+    Restoring an encrypted backup during first launch restores data locally on
+    the device. It does not automatically enable iCloud Sync.
   </p>
 
   <h3>Name Your Budget</h3>
@@ -304,6 +321,8 @@
   <p>
     You can choose how Safe To Spend is shown from
     <strong>Settings &gt; Balance &gt; Safe to spend</strong>.
+    The setting is shown as <strong>Frequency</strong> because it controls how
+    Safe To Spend is split over time.
   </p>
   <p>Options include:</p>
   <ul>
@@ -312,13 +331,18 @@
     <li>Fortnightly</li>
     <li>Monthly</li>
     <li>Yearly</li>
-    <li>Match budget period</li>
+    <li>Match Period</li>
   </ul>
   <p>
     For example, if Safe To Spend is set to Weekly, the Dashboard and widgets
-    show the amount available for the current week. If it is set to Match budget
-    period, SiBalance shows the amount available for the rest of the current
+    show the amount available for the current week. If it is set to Match
+    Period, SiBalance shows the amount available for the rest of the current
     budget period.
+  </p>
+  <p>
+    Weekly and fortnightly Safe To Spend windows use the chosen week start when
+    the budget itself is weekly or fortnightly. For other budget intervals, those
+    windows use Monday starts.
   </p>
   <p>
     Safe To Spend settings are saved per budget. One budget can use Weekly while
@@ -434,13 +458,16 @@
   <h3>Budgets</h3>
   <p>Create, switch between, and manage separate money plans.</p>
   <ul>
-    <li>View the current budget</li>
+    <li>View the <strong>Selected Budget</strong></li>
     <li>Add another budget</li>
     <li>Manage separate income and expenses for each budget</li>
   </ul>
+  <p>
+    The selected budget applies to settings such as Timeframes and Balance.
+  </p>
 
   <h3>Timeframes</h3>
-  <p>Configure how your budget periods work.</p>
+  <p>Configure how budget periods work for the selected budget.</p>
   <ul>
     <li>Week starts</li>
     <li>Budget interval</li>
@@ -449,11 +476,11 @@
   </ul>
 
   <h3>Balance</h3>
-  <p>Adjust how balances behave and appear.</p>
+  <p>Adjust how balances behave and appear for the selected budget.</p>
   <ul>
     <li><strong>Carry unused balance:</strong> add remaining balance to the next period</li>
     <li><strong>Always hide balance:</strong> keep totals hidden until you reveal them</li>
-    <li><strong>Safe to spend:</strong> choose whether Safe To Spend is shown daily, weekly, fortnightly, monthly, yearly, or for the matching budget period</li>
+    <li><strong>Safe to spend:</strong> choose the frequency for how Safe To Spend is split over time, such as daily, weekly, fortnightly, monthly, yearly, or Match Period</li>
     <li><strong>Safety buffer:</strong> set money aside from Safe To Spend without changing your balance</li>
   </ul>
 
@@ -537,8 +564,8 @@
     <li>Turn on <strong>Reduce Motion</strong></li>
   </ol>
 
-  <h3>Security &amp; Backup</h3>
-  <p>Protect the app and keep data in sync.</p>
+  <h3 id="backup-and-restore">Security &amp; Storage</h3>
+  <p>Protect the app, manage sync, and create or restore encrypted backups.</p>
 
   <h4>Device Passcode / Face ID</h4>
   <p>
@@ -552,6 +579,49 @@
   </p>
   <p>
     When iCloud Sync is off, your data remains stored locally on your device.
+  </p>
+
+  <h4>Encrypted Backups</h4>
+  <p>
+    SiBalance can create manual encrypted backup files using the <strong>.sibackup</strong>
+    format. Go to <strong>Settings &gt; Security &amp; Storage &gt; Advanced
+    Privacy &gt; Create Encrypted Backup</strong>.
+  </p>
+  <p>
+    Backup creation asks you to enter and confirm a password, and to acknowledge
+    that the password cannot be recovered if forgotten. You can show or hide the
+    password while creating the backup.
+  </p>
+  <p>
+    The default filename is <strong>SiBalance Backup YYYY-MM-DD.sibackup</strong>.
+    Backups include budgets, income, expenses, transactions, categories,
+    recurring items, and settings.
+  </p>
+  <p>
+    Backups are encrypted using AES-GCM with PBKDF2-HMAC-SHA256.
+  </p>
+
+  <h4>Restoring an Encrypted Backup</h4>
+  <p>
+    To restore a manual backup, go to <strong>Settings &gt; Security &amp;
+    Storage &gt; Advanced Privacy &gt; Restore Encrypted Backup</strong>.
+  </p>
+  <ol>
+    <li>Choose a <strong>.sibackup</strong> file</li>
+    <li>Enter the backup password</li>
+    <li>Confirm the restore</li>
+  </ol>
+  <p>
+    Restoring a backup replaces the current local SiBalance data on this device.
+  </p>
+  <p>
+    If iCloud Sync is enabled and you have SiBalance Premium, SiBalance can offer
+    <strong>Restore and Update iCloud</strong>. This restores the backup locally
+    and pushes the restored data to iCloud so your other devices can receive it.
+  </p>
+  <p>
+    If the iCloud update fails, SiBalance keeps the local restore and queues sync
+    for later.
   </p>
 
   <h4>Restoring Data After Reinstalling SiBalance</h4>
@@ -577,14 +647,11 @@
       <strong>Stop Using iCloud:</strong> stops syncing and keeps this device's
       data stored locally in SiBalance.
     </li>
-    <li>
-      <strong>Delete iCloud Data:</strong> removes SiBalance data from iCloud
-      while keeping this device local.
-    </li>
   </ul>
   <p>
-    Use these options carefully. Deleting iCloud data may affect other devices
-    connected to the same iCloud account.
+    Delete iCloud Data is available from the Data section. Use it carefully, as
+    deleting iCloud data may affect other devices connected to the same iCloud
+    account.
   </p>
 
   <h3>Help and Support</h3>
@@ -606,7 +673,11 @@
   <h3>Data</h3>
   <p>Use Data settings for permanent actions.</p>
   <p>
-    <strong>Delete Data</strong> removes all saved budget data from this app.
+    <strong>Delete iCloud Data</strong> removes SiBalance data from iCloud while
+    keeping this device local.
+  </p>
+  <p>
+    <strong>Delete All Data</strong> removes all saved budget data from this app.
     This action cannot be undone.
   </p>
 
