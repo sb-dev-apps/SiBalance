@@ -94,7 +94,7 @@
 
     <main class="document">
   <h1>SiBalance User Guide</h1>
-  <p class="date">Last updated: 30 June 2026</p>
+  <p class="date">Last updated: 1 July 2026</p>
   <p class="date">Covers SiBalance 1.5.0 and later.</p>
 
   <p>
@@ -110,7 +110,7 @@
       <li><a href="#income">Income</a></li>
       <li><a href="#expenses">Expenses</a></li>
       <li><a href="#counts-towards-safe-to-spend">Counts Towards Safe To Spend</a></li>
-      <li><a href="#searching-and-deleting-entries">Searching and Deleting Entries</a></li>
+      <li><a href="#searching-editing-and-deleting-entries">Searching, Editing and Deleting Entries</a></li>
       <li><a href="#dashboard">Dashboard</a></li>
       <li><a href="#safe-to-spend">Safe To Spend</a></li>
       <li><a href="#widgets">Widgets</a></li>
@@ -242,7 +242,7 @@
 
   <hr>
 
-  <h2 id="searching-and-deleting-entries">Searching and Deleting Entries</h2>
+  <h2 id="searching-editing-and-deleting-entries">Searching, Editing and Deleting Entries</h2>
 
   <h3>Searching Entries</h3>
   <p>
@@ -265,6 +265,26 @@
     sort order.
   </p>
 
+  <h3>Editing Entries</h3>
+  <p>
+    Income and expense rows use swipe actions for editing. Swipe left on an
+    income or expense row, then tap <strong>Edit</strong>.
+  </p>
+  <p>
+    For one-time entries, the edit screen opens directly.
+  </p>
+  <p>For repeating entries, choose how much of the series to change:</p>
+  <ul>
+    <li><strong>Edit This Entry:</strong> changes only that single occurrence</li>
+    <li><strong>Edit All Entries:</strong> changes the full repeating series</li>
+  </ul>
+  <p>
+    If one occurrence from a repeating series has been edited separately, the row
+    shows an <strong>Edited</strong> pill next to <strong>Repeating</strong>.
+    This shows that the entry is still connected to a repeating series, but has
+    been individually changed.
+  </p>
+
   <h3>Deleting Entries</h3>
   <p>
     Swipe left on an income or expense row, then tap <strong>Delete</strong>.
@@ -281,6 +301,10 @@
   <p>
     Deleting an item updates the current period totals, dashboard totals,
     insights, and widgets.
+  </p>
+  <p>
+    These choices help prevent accidentally changing or deleting an entire
+    repeating income or bill when you only meant to update one occurrence.
   </p>
 
   <hr>
@@ -578,6 +602,21 @@
   <h4>Device Passcode / Face ID</h4>
   <p>
     Enable Device Passcode or Face ID to require device authentication when opening SiBalance.
+  </p>
+  <p>
+    When app lock is enabled, use <strong>Auto-Lock</strong> to choose when
+    SiBalance should require authentication again after you leave the app.
+  </p>
+  <ul>
+    <li>Immediately</li>
+    <li>After 1 Minute</li>
+    <li>After 5 Minutes</li>
+    <li>After 10 Minutes</li>
+  </ul>
+  <p>
+    <strong>Immediately</strong> locks SiBalance as soon as you leave the app or
+    open the app switcher. The privacy lock screen is shown so financial details
+    are not visible in the app preview.
   </p>
 
   <h4>iCloud Sync</h4>
