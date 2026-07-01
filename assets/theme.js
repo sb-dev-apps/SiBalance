@@ -23,7 +23,7 @@
     root.dataset.theme = nextTheme;
 
     Array.prototype.slice.call(document.querySelectorAll(".theme-toggle")).forEach(function (button) {
-      var label = nextTheme === "light" ? "Light" : "Dark";
+      var label = nextTheme === "light" ? "Dark" : "Light";
       button.setAttribute("aria-pressed", nextTheme === "light" ? "true" : "false");
 
       var text = button.querySelector(".theme-toggle-text");
