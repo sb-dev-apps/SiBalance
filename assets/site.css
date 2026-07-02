@@ -175,6 +175,36 @@ footer,
   color: #9eb0d2;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.document .footer-links {
+  margin-top: 10px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #c9d9ff;
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-icon:hover {
+  color: #35d6ff;
+}
+
 .document p,
 .document li {
   color: #d8e3f8;
@@ -213,8 +243,16 @@ html[data-theme="light"] footer a {
   color: #2853b8;
 }
 
+html[data-theme="light"] .social-icon {
+  color: #2853b8;
+}
+
 html[data-theme="light"] nav a:hover,
 html[data-theme="light"] footer a:hover {
+  color: #7a32d8;
+}
+
+html[data-theme="light"] .social-icon:hover {
   color: #7a32d8;
 }
 
