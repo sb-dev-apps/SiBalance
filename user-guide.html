@@ -94,7 +94,7 @@
 
     <main class="document">
   <h1>SiBalance User Guide</h1>
-  <p class="date">Last updated: 1 July 2026</p>
+  <p class="date">Last updated: 3 July 2026</p>
   <p class="date">Covers SiBalance 1.5.0 and later.</p>
 
   <p>
@@ -130,10 +130,15 @@
   <h3>Create or Restore Your First Budget</h3>
   <p>When you first open SiBalance, choose how you want to begin.</p>
   <ul>
-    <li><strong>Check iCloud Backup:</strong> look for existing SiBalance data in iCloud</li>
     <li><strong>New Budget:</strong> start again with a new budget</li>
+    <li><strong>Check iCloud Backup:</strong> look for existing SiBalance data in iCloud</li>
     <li><strong>Restore Encrypted Backup:</strong> restore from a manual <strong>.sibackup</strong> file</li>
+    <li><strong>Restore Purchases:</strong> restore an existing SiBalance Premium or Lifetime purchase</li>
   </ul>
+  <p>
+    On smaller phones, the setup screen can scroll so all setup options remain
+    reachable.
+  </p>
   <p>You can begin a free trial of SiBalance Premium or restore an existing purchase if a feature requires Premium.</p>
 
   <h3>Choose Your Currency</h3>
@@ -160,6 +165,17 @@
     found, not found, unavailable, and restoring. If an iCloud backup is found
     but requires SiBalance Premium, the restore option will guide you through
     Premium first.
+  </p>
+  <p>
+    If you tap <strong>New Budget</strong> and SiBalance finds existing iCloud
+    data, it will ask whether you want to restore that iCloud backup, start a new
+    budget anyway, or cancel. If no iCloud data is found, New Budget continues
+    normally.
+  </p>
+  <p>
+    If you deliberately start a new budget despite existing iCloud data,
+    SiBalance will not immediately prompt you to turn on iCloud Sync. This helps
+    avoid accidentally replacing an older iCloud backup.
   </p>
   <p>
     Restoring an encrypted backup during first launch restores data locally on
@@ -680,6 +696,11 @@
     If the iCloud update fails, SiBalance keeps the local restore and queues sync
     for later.
   </p>
+  <p>
+    After restoring an encrypted backup, SiBalance checks your App Store purchase
+    status before deciding what access message to show. This helps the app
+    recognise existing Premium or Lifetime access correctly.
+  </p>
 
   <h4>Restoring Data After Reinstalling SiBalance</h4>
   <p>
@@ -725,7 +746,19 @@
     <li>View your subscription</li>
     <li>Change your plan</li>
     <li>Cancel Premium</li>
+    <li>Restore purchases</li>
   </ul>
+  <p>
+    Use <strong>Restore Purchases</strong> if you already bought SiBalance
+    Premium or Lifetime and need to restore access on this device. If Apple's
+    sign-in or restore prompt is cancelled, SiBalance will show that the restore
+    was cancelled instead of saying purchases were restored.
+  </p>
+  <p>
+    If a restore sync problem occurs but the App Store already shows valid
+    Lifetime access, SiBalance can still restore access from the current App
+    Store entitlement.
+  </p>
 
   <h3>Data</h3>
   <p>Use Data settings for permanent actions.</p>
