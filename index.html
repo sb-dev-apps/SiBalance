@@ -84,12 +84,17 @@
     }
 
     .hero {
+      --hero-fade: 1;
+      --hero-shift: 0px;
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
       align-items: center;
       gap: 64px;
       margin-top: -50px;
       margin-bottom: 56px;
+      opacity: var(--hero-fade);
+      transform: translateY(var(--hero-shift));
+      transition: opacity 120ms linear, transform 120ms linear;
     }
 
     .hero-copy {
@@ -119,6 +124,14 @@
       width: min(100%, 360px);
       height: auto;
       filter: drop-shadow(0 38px 80px rgba(0, 0, 0, 0.52));
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none;
+      }
     }
 
     .eyebrow {
@@ -461,5 +474,35 @@
     </footer>
   </div>
 
+  <script>
+    (function () {
+      var hero = document.querySelector(".hero");
+      if (!hero || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+      }
+
+      var ticking = false;
+
+      function updateHeroFade() {
+        var progress = Math.min(window.scrollY / 260, 1);
+        var opacity = Math.max(1 - progress * 0.72, 0.28);
+        hero.style.setProperty("--hero-fade", opacity.toFixed(3));
+        hero.style.setProperty("--hero-shift", Math.round(progress * -28) + "px");
+        ticking = false;
+      }
+
+      function requestUpdate() {
+        if (ticking) {
+          return;
+        }
+
+        ticking = true;
+        window.requestAnimationFrame(updateHeroFade);
+      }
+
+      updateHeroFade();
+      window.addEventListener("scroll", requestUpdate, { passive: true });
+    }());
+  </script>
 </body>
 </html>
