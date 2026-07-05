@@ -84,7 +84,8 @@
     }
 
     .hero {
-      --hero-fade: 1;
+      --hero-copy-fade: 1;
+      --hero-visual-fade: 1;
       --hero-shift: 0px;
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
@@ -92,19 +93,22 @@
       gap: 64px;
       margin-top: -50px;
       margin-bottom: 56px;
-      opacity: var(--hero-fade);
       transform: translateY(var(--hero-shift));
-      transition: opacity 120ms linear, transform 120ms linear;
+      transition: transform 120ms linear;
     }
 
     .hero-copy {
       max-width: 720px;
+      opacity: var(--hero-copy-fade);
+      transition: opacity 120ms linear;
     }
 
     .hero-visual {
       position: relative;
       display: grid;
+      opacity: var(--hero-visual-fade);
       place-items: center;
+      transition: opacity 120ms linear;
     }
 
     .hero-visual::before {
@@ -128,8 +132,13 @@
 
     @media (prefers-reduced-motion: reduce) {
       .hero {
-        opacity: 1 !important;
         transform: none !important;
+        transition: none;
+      }
+
+      .hero-copy,
+      .hero-visual {
+        opacity: 1 !important;
         transition: none;
       }
     }
@@ -484,10 +493,17 @@
       var ticking = false;
 
       function updateHeroFade() {
-        var progress = Math.min(window.scrollY / 260, 1);
-        var opacity = Math.max(1 - progress * 0.72, 0.28);
-        hero.style.setProperty("--hero-fade", opacity.toFixed(3));
-        hero.style.setProperty("--hero-shift", Math.round(progress * -28) + "px");
+        var isMobile = window.matchMedia("(max-width: 720px)").matches;
+        var progress = Math.min(window.scrollY / (isMobile ? 320 : 260), 1);
+        var copyOpacity = Math.max(1 - progress * 0.72, 0.28);
+        var visualOpacity = isMobile
+          ? Math.max(1 - progress * 0.18, 0.82)
+          : copyOpacity;
+        var shift = Math.round(progress * (isMobile ? -14 : -28));
+
+        hero.style.setProperty("--hero-copy-fade", copyOpacity.toFixed(3));
+        hero.style.setProperty("--hero-visual-fade", visualOpacity.toFixed(3));
+        hero.style.setProperty("--hero-shift", shift + "px");
         ticking = false;
       }
 
