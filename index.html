@@ -130,108 +130,6 @@
       filter: drop-shadow(0 38px 80px rgba(0, 0, 0, 0.52));
     }
 
-    .showcase {
-      border-top: 1px solid rgba(146, 183, 255, 0.18);
-      margin: 12px 0 72px;
-      padding-top: 64px;
-    }
-
-    .showcase-header {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 28px;
-      margin-bottom: 30px;
-    }
-
-    .showcase-copy {
-      max-width: 650px;
-    }
-
-    .showcase-kicker {
-      margin: 0 0 8px;
-      color: #35d6ff;
-      font-size: 14px;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
-
-    .showcase h2 {
-      margin-bottom: 10px;
-      font-size: clamp(30px, 4vw, 44px);
-      line-height: 1.1;
-    }
-
-    .showcase-copy > p:last-child {
-      margin: 0;
-      color: #aebfe2;
-      font-size: 18px;
-    }
-
-    .showcase-controls {
-      display: flex;
-      flex: 0 0 auto;
-      gap: 10px;
-    }
-
-    .showcase-control {
-      display: inline-grid;
-      width: 42px;
-      height: 42px;
-      border: 1px solid rgba(146, 183, 255, 0.3);
-      border-radius: 50%;
-      color: #e7efff;
-      background: rgba(255, 255, 255, 0.07);
-      font: inherit;
-      font-size: 21px;
-      cursor: pointer;
-      place-items: center;
-    }
-
-    .showcase-control:hover:not(:disabled) {
-      border-color: rgba(53, 214, 255, 0.72);
-      background: rgba(255, 255, 255, 0.13);
-    }
-
-    .showcase-control:disabled {
-      cursor: default;
-      opacity: 0.34;
-    }
-
-    .showcase-track {
-      display: grid;
-      grid-auto-columns: minmax(250px, 30%);
-      grid-auto-flow: column;
-      gap: 22px;
-      overflow-x: auto;
-      padding: 6px 2px 22px;
-      scroll-behavior: smooth;
-      scroll-snap-type: x mandatory;
-      scrollbar-color: rgba(53, 214, 255, 0.42) rgba(146, 183, 255, 0.1);
-      scrollbar-width: thin;
-    }
-
-    .showcase-item {
-      min-width: 0;
-      margin: 0;
-      scroll-snap-align: start;
-    }
-
-    .showcase-item img {
-      display: block;
-      width: 100%;
-      height: auto;
-      filter: drop-shadow(0 26px 42px rgba(0, 0, 0, 0.38));
-    }
-
-    .showcase-item figcaption {
-      margin-top: 2px;
-      color: #c9d9ff;
-      font-size: 15px;
-      font-weight: 700;
-      text-align: center;
-    }
-
     @media (prefers-reduced-motion: reduce) {
       .hero {
         transform: none !important;
@@ -398,24 +296,6 @@
       padding-top: 20px;
     }
 
-    html[data-theme="light"] .showcase {
-      border-color: rgba(41, 80, 154, 0.14);
-    }
-
-    html[data-theme="light"] .showcase-copy > p:last-child {
-      color: #61759c;
-    }
-
-    html[data-theme="light"] .showcase-control {
-      border-color: rgba(41, 80, 154, 0.22);
-      color: #102b5d;
-      background: rgba(255, 255, 255, 0.72);
-    }
-
-    html[data-theme="light"] .showcase-item figcaption {
-      color: #264879;
-    }
-
     .footer-links {
       display: flex;
       flex-wrap: wrap;
@@ -469,37 +349,6 @@
 
       .hero-phone {
         width: min(78vw, 300px);
-      }
-
-      .showcase {
-        margin: 4px 0 56px;
-        padding-top: 48px;
-      }
-
-      .showcase-header {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 18px;
-        margin-bottom: 22px;
-      }
-
-      .showcase h2 {
-        font-size: 32px;
-      }
-
-      .showcase-copy > p:last-child {
-        font-size: 17px;
-      }
-
-      .showcase-controls {
-        display: none;
-      }
-
-      .showcase-track {
-        grid-auto-columns: 78%;
-        gap: 14px;
-        margin-right: -18px;
-        padding-right: 18px;
       }
 
       .card {
@@ -558,45 +407,7 @@
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <img class="hero-phone" src="assets/mockup-dashboard.png" alt="" width="738" height="1600" fetchpriority="high">
-        </div>
-      </section>
-
-      <section class="showcase" aria-labelledby="showcase-title">
-        <div class="showcase-header">
-          <div class="showcase-copy">
-            <p class="showcase-kicker">Inside SiBalance</p>
-            <h2 id="showcase-title">A clearer view of your money.</h2>
-            <p>Real screens from SiBalance, from everyday entries to private insights.</p>
-          </div>
-
-          <div class="showcase-controls" aria-label="App screen gallery controls">
-            <button class="showcase-control showcase-previous" type="button" aria-label="Previous app screen" title="Previous app screen" disabled>&larr;</button>
-            <button class="showcase-control showcase-next" type="button" aria-label="Next app screen" title="Next app screen">&rarr;</button>
-          </div>
-        </div>
-
-        <div class="showcase-track" tabindex="0" aria-label="SiBalance app screens">
-          <figure class="showcase-item">
-            <img src="assets/mockup-dashboard.png" alt="SiBalance dashboard showing balance and Safe to Spend" width="738" height="1600" loading="lazy">
-            <figcaption>Dashboard</figcaption>
-          </figure>
-          <figure class="showcase-item">
-            <img src="assets/mockup-income.png" alt="SiBalance income screen with repeating and planned entries" width="738" height="1600" loading="lazy">
-            <figcaption>Income</figcaption>
-          </figure>
-          <figure class="showcase-item">
-            <img src="assets/mockup-expenses.png" alt="SiBalance expenses screen with repeating and Safe to Spend entries" width="738" height="1600" loading="lazy">
-            <figcaption>Expenses</figcaption>
-          </figure>
-          <figure class="showcase-item">
-            <img src="assets/mockup-insights.png" alt="SiBalance insights screen with briefing, forecast, and patterns" width="738" height="1600" loading="lazy">
-            <figcaption>Insights</figcaption>
-          </figure>
-          <figure class="showcase-item">
-            <img src="assets/mockup-briefing.png" alt="SiBalance private briefing showing budget changes" width="738" height="1600" loading="lazy">
-            <figcaption>Private Briefing</figcaption>
-          </figure>
+          <img class="hero-phone" src="assets/iphone-dashboard.png" alt="" width="360">
         </div>
       </section>
 
@@ -697,31 +508,6 @@
 
       updateHeroFade();
       window.addEventListener("scroll", requestUpdate, { passive: true });
-    }());
-
-    (function () {
-      var track = document.querySelector(".showcase-track");
-      var previous = document.querySelector(".showcase-previous");
-      var next = document.querySelector(".showcase-next");
-      if (!track || !previous || !next) {
-        return;
-      }
-
-      function updateControls() {
-        var remaining = track.scrollWidth - track.clientWidth - track.scrollLeft;
-        previous.disabled = track.scrollLeft < 4;
-        next.disabled = remaining < 4;
-      }
-
-      function moveGallery(direction) {
-        track.scrollBy({ left: direction * track.clientWidth * 0.72, behavior: "smooth" });
-      }
-
-      previous.addEventListener("click", function () { moveGallery(-1); });
-      next.addEventListener("click", function () { moveGallery(1); });
-      track.addEventListener("scroll", updateControls, { passive: true });
-      window.addEventListener("resize", updateControls);
-      updateControls();
     }());
   </script>
 </body>
