@@ -257,10 +257,6 @@ html[data-theme="light"] .hero-section {
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.apple-product-name {
   text-transform: none;
 }
 
@@ -570,9 +566,8 @@ html[data-theme="light"] .privacy-panel {
 
 .purchase-panel {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  gap: 70px;
 }
 
 .purchase-panel > div > p:not(.section-label) {
@@ -869,14 +864,6 @@ html[data-theme="light"] .landing-footer {
 
   .privacy-panel {
     padding: 34px;
-  }
-
-  .purchase-panel .store-link {
-    justify-self: start;
-  }
-
-  .purchase-panel > .store-link {
-    display: none;
   }
 
   .footer-layout {
