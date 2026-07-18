@@ -660,6 +660,11 @@ html[data-theme="light"] .landing-footer {
   font-size: 13px;
 }
 
+.independent-heart {
+  color: #30bff3;
+  font-size: 1.1em;
+}
+
 .home-page .social-icon {
   color: var(--home-muted);
 }
