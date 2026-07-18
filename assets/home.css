@@ -260,6 +260,10 @@ html[data-theme="light"] .hero-section {
   text-transform: uppercase;
 }
 
+.apple-product-name {
+  text-transform: none;
+}
+
 .hero-copy h1 {
   max-width: 760px;
   margin-bottom: 24px;
@@ -869,6 +873,10 @@ html[data-theme="light"] .landing-footer {
 
   .purchase-panel .store-link {
     justify-self: start;
+  }
+
+  .purchase-panel > .store-link {
+    display: none;
   }
 
   .footer-layout {
