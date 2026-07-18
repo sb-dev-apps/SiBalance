@@ -249,6 +249,8 @@ html[data-theme="light"] .hero-section {
   position: relative;
   z-index: 2;
   max-width: 740px;
+  opacity: var(--hero-copy-opacity, 1);
+  transform: translate3d(0, var(--hero-copy-shift, 0), 0);
 }
 
 .section-label {
@@ -307,6 +309,8 @@ html[data-theme="light"] .hero-lede {
   margin-bottom: -56px;
   display: grid;
   place-items: start center;
+  opacity: var(--hero-visual-opacity, 1);
+  transform: translate3d(0, var(--hero-visual-shift, 0), 0);
 }
 
 .hero-visual::before {
@@ -917,6 +921,11 @@ html[data-theme="light"] .landing-footer {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .hero-copy,
+  .hero-visual {
+    will-change: opacity, transform;
+  }
+
   .home-page a,
   .home-page button,
   .store-link,
