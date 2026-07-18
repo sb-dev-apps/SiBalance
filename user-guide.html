@@ -107,8 +107,8 @@
 
     <main class="document">
   <h1>SiBalance User Guide</h1>
-  <p class="date">Last updated: 16 July 2026</p>
-  <p class="date">Covers SiBalance 1.5.0 and later.</p>
+  <p class="date">Last updated: 18 July 2026</p>
+  <p class="date">Covers SiBalance 2.0.0 and later.</p>
 
   <p>
     Welcome to SiBalance. This guide explains how to set up your budget,
@@ -634,34 +634,103 @@
 
   <h2 id="settings">Settings</h2>
 
-  <h3>Budgets</h3>
-  <p>Create, switch between, and manage separate money plans.</p>
-  <ul>
-    <li>View the <strong>Selected Budget</strong></li>
-    <li>Add another budget</li>
-    <li>Manage separate income and expenses for each budget</li>
-  </ul>
   <p>
-    The selected budget applies to settings such as Timeframes and Balance.
+    Open Settings from the button in the top-right of the Dashboard. Settings
+    marked <strong>For [budget name]</strong> affect only the selected budget;
+    settings marked <strong>For all active budgets</strong> apply across every
+    budget that has not been archived.
   </p>
 
-  <h3>Timeframes</h3>
-  <p>Configure how budget periods work for the selected budget.</p>
+  <h3>Budgets</h3>
+  <p>Create, switch between, and manage separate money plans. Each budget keeps
+    its own income, expenses, goals, currency, timeframe, and balance settings.</p>
   <ul>
-    <li>Week starts</li>
-    <li>Budget interval</li>
-    <li>Custom budget period</li>
-    <li>Budget starts</li>
-    <li>Date format</li>
+    <li>
+      <strong>Selected Budget:</strong> chooses the budget currently shown in the
+      app. It also decides which budget the Timeframes and Balance sections below
+      will change. This selector appears when you have more than one active budget.
+    </li>
+    <li>
+      <strong>Budget menu (•••):</strong> use Edit to change that budget's name,
+      currency, interval, starting point, and date format. Archive hides it from
+      the budget selector without deleting its data. Restore makes an archived
+      budget active again. Delete removes the budget and its saved entries; use
+      the Undo prompt immediately if you deleted it by mistake. Your last active
+      budget cannot be archived or deleted.
+    </li>
+    <li>
+      <strong>Add Budget:</strong> starts a separate money plan with its own
+      income, expenses, and goals. Adding a budget does not change or merge your
+      existing budgets.
+    </li>
+  </ul>
+
+  <h3>Timeframes</h3>
+  <p>Configure how periods and dates work for the selected budget.</p>
+  <ul>
+    <li>
+      <strong>Budget Interval:</strong> sets how long each budget period lasts.
+      Choose Daily, Weekly, Fortnightly, Monthly, Yearly, or Custom. The Dashboard,
+      Insights, reports, and period-ending reminders use these period boundaries.
+    </li>
+    <li>
+      <strong>Unit:</strong> appears when Budget Interval is Custom. Choose whether
+      the custom period is measured in days, weeks, months, or years.
+    </li>
+    <li>
+      <strong>Length:</strong> appears for a Custom interval. Use the minus and plus
+      buttons to choose how many of the selected units make one period, from 1 to
+      999.
+    </li>
+    <li>
+      <strong>Week Starts:</strong> sets the first day of weekly, fortnightly, or
+      custom week-based periods. For example, a Monday start makes each weekly
+      period run from Monday to Sunday.
+    </li>
+    <li>
+      <strong>Budget Starts:</strong> sets the anchor used to line up repeating
+      periods. For monthly periods, choose a day of the month. For custom
+      day-based periods, choose the date from which the repeating periods begin.
+      If a chosen day does not exist in a shorter month, SiBalance uses the valid
+      period boundary for that month.
+    </li>
+    <li>
+      <strong>Date Format:</strong> chooses how dates are displayed for this budget,
+      including formats such as 18 Jul 2026, 18/07/2026, 07-18-2026,
+      07/18/2026, and 2026-07-18. It changes presentation, not the dates stored
+      with your entries.
+    </li>
   </ul>
 
   <h3>Balance</h3>
-  <p>Adjust how balances behave and appear for the selected budget.</p>
+  <p>Adjust how balances are calculated and displayed for the selected budget.</p>
   <ul>
-    <li><strong>Carry unused balance:</strong> add remaining balance to the next period</li>
-    <li><strong>Always hide balance:</strong> keep totals hidden until you reveal them</li>
-    <li><strong>Safe to spend:</strong> choose the frequency for how Safe To Spend is split over time, such as daily, weekly, fortnightly, monthly, yearly, or Match Period</li>
-    <li><strong>Safety buffer:</strong> set money aside from Safe To Spend without changing your balance</li>
+    <li>
+      <strong>Carry Unused Balance:</strong> includes the net balance from before
+      the current period in the current period. Turn it off to calculate each
+      period from only that period's income, expenses, and goal activity.
+    </li>
+    <li>
+      <strong>Always Hide Balance:</strong> starts money totals hidden whenever you
+      view the app. You can still reveal them with the eye control for the current
+      view, but SiBalance hides them again later for privacy.
+    </li>
+    <li>
+      <strong>Safe to Spend:</strong> chooses the window used for the Safe To Spend
+      allowance: Daily, Weekly, Fortnightly, Monthly, Yearly, or Match Period.
+      Match Period shows the allowance for the remainder of the selected budget's
+      current period. A change applies to the calculation from today.
+    </li>
+    <li>
+      <strong>Safety Buffer:</strong> reserves part of the current balance before
+      Safe To Spend is calculated. Choose None, a suggested amount of 50, 100, or
+      250 in the budget's currency, or Custom. The buffer lowers Safe To Spend but
+      does not record an expense or change the displayed balance.
+    </li>
+    <li>
+      <strong>Custom Buffer:</strong> appears when Safety Buffer is set to Custom.
+      Enter the exact amount you want SiBalance to keep out of Safe To Spend.
+    </li>
   </ul>
 
   <h3>Notifications</h3>
@@ -670,92 +739,57 @@
     Notifications are optional and can be changed at any time from
     <strong>Settings &gt; Notifications</strong>.
   </p>
-  <p>Available reminders include:</p>
+  <p>These choices apply to all active budgets:</p>
   <ul>
-    <li><strong>Expense due:</strong> reminds you before saved expenses are due</li>
-    <li><strong>Income due:</strong> reminds you before expected income dates</li>
-    <li><strong>Period ending:</strong> reminds you before the current budget period ends</li>
+    <li>
+      <strong>Expense Due:</strong> sends a reminder for upcoming dates attached
+      to saved one-off and repeating expenses.
+    </li>
+    <li>
+      <strong>Income Due:</strong> sends a reminder for upcoming expected dates
+      attached to saved one-off and repeating income.
+    </li>
+    <li>
+      <strong>Period Ending:</strong> reminds you that each active budget's current
+      period is about to end so you can review it.
+    </li>
+    <li>
+      <strong>Reminder Time:</strong> chooses the time of day at which enabled
+      reminders appear.
+    </li>
+    <li>
+      <strong>Due Reminder:</strong> chooses when every enabled reminder is sent:
+      on the day, 1 day before, 2 days before, or a custom number of days before.
+    </li>
+    <li>
+      <strong>Custom Reminder:</strong> appears when Due Reminder is set to Custom.
+      Use minus or plus to choose from 3 to 60 days before the relevant date.
+    </li>
   </ul>
-  <p>
-    You can choose how far in advance due reminders appear. This applies to
-    expense, income, and period ending reminders.
-  </p>
   <p>
     Notifications are created locally on your device. SiBalance does not send
-    your budget data to a server to create reminders.
+    your budget data to a server to create reminders. The first reminder you turn
+    on asks for iOS notification permission. If reminders do not appear, check
+    that notifications are allowed for SiBalance in iOS Settings.
   </p>
-  <p>
-    If notifications do not appear, check that notifications are enabled for
-    SiBalance in iOS Settings.
-  </p>
-
-  <h3>Appearance</h3>
-  <p>Change the app's look and theme.</p>
-  <ul>
-    <li>Light mode</li>
-    <li>Dark mode</li>
-    <li>System mode</li>
-    <li>Theme</li>
-    <li>App icon</li>
-  </ul>
-
-  <h3>Accessibility</h3>
-  <p>
-    SiBalance includes accessibility support across key budgeting flows.
-  </p>
-  <ul>
-    <li>
-      <strong>VoiceOver support:</strong> key dashboard cards, Safe To Spend,
-      income and expense actions, settings rows, purchase options, and controls
-      include accessibility labels, values, and hints.
-    </li>
-    <li>
-      <strong>Reduced Motion support:</strong> SiBalance respects iOS Reduce Motion
-      and includes an in-app Reduce Dashboard Motion setting.
-    </li>
-    <li>
-      <strong>Dynamic Type support:</strong> many screens support larger text sizes,
-      wrapping, and layout adjustments.
-    </li>
-    <li>
-      <strong>High contrast and legibility support:</strong> backgrounds and decorative
-      visuals adapt for increased contrast, and decorative imagery is hidden from
-      assistive technologies.
-    </li>
-    <li>
-      <strong>Large touch targets:</strong> important controls use accessible hit areas
-      and clear labels.
-    </li>
-    <li>
-      <strong>Balance privacy controls:</strong> balances can be hidden or revealed
-      to reduce visual exposure.
-    </li>
-  </ul>
-
-  <h4>Reduce Motion</h4>
-  <p>
-    If you prefer fewer animations and motion effects, enable Reduce Motion in iOS Settings.
-    SiBalance automatically respects this setting.
-  </p>
-  <ol>
-    <li>Open the <strong>Settings</strong> app on your iPhone</li>
-    <li>Tap <strong>Accessibility</strong></li>
-    <li>Tap <strong>Motion</strong></li>
-    <li>Turn on <strong>Reduce Motion</strong></li>
-  </ol>
 
   <h3 id="backup-and-restore">Security &amp; Storage</h3>
   <p>Protect the app, manage sync, and create or restore encrypted backups.</p>
 
   <h4>Device Passcode / Face ID</h4>
   <p>
-    Enable Device Passcode or Face ID to require device authentication when opening SiBalance.
+    <strong>Device Passcode / Face ID</strong> requires device-owner authentication
+    whenever SiBalance is opened. Depending on your device, iOS can use Face ID,
+    Touch ID, or the device passcode. SiBalance asks you to authenticate once when
+    you turn the setting on.
   </p>
 
   <h4>iCloud Sync</h4>
   <p>
-    iCloud Sync keeps your budgets, transactions, categories, and settings available
-    across your Apple devices.
+    <strong>iCloud Sync</strong> keeps budgets, income, expenses, goals, categories,
+    and settings available on your Apple devices signed into the same Apple ID.
+    The status panel underneath shows whether sync is off, working, or when it
+    last completed.
   </p>
   <p>
     When iCloud Sync is off, your data remains stored locally on your device.
@@ -763,9 +797,10 @@
 
   <h4>Encrypted Backups</h4>
   <p>
-    SiBalance can create manual encrypted backup files using the <strong>.sibackup</strong>
-    format. Go to <strong>Settings &gt; Security &amp; Storage &gt; Advanced
-    Privacy &gt; Create Encrypted Backup</strong>.
+    <strong>Create Encrypted Backup</strong> creates a password-protected snapshot
+    of your SiBalance data in the <strong>.sibackup</strong> format. You choose
+    where to save or share the file, so it can be kept outside iCloud or alongside
+    another backup system.
   </p>
   <p>
     Backup creation asks you to enter and confirm a password, and to acknowledge
@@ -783,8 +818,8 @@
 
   <h4>Restoring an Encrypted Backup</h4>
   <p>
-    To restore a manual backup, go to <strong>Settings &gt; Security &amp;
-    Storage &gt; Advanced Privacy &gt; Restore Encrypted Backup</strong>.
+    <strong>Restore Encrypted Backup</strong> lets you choose a
+    <strong>.sibackup</strong> file and unlock it with its password.
   </p>
   <ol>
     <li>Choose a <strong>.sibackup</strong> file</li>
@@ -833,24 +868,84 @@
     account.
   </p>
 
-  <h3>Help and Support</h3>
-  <p>Use Help and Support for guides and assistance.</p>
+  <h3>Appearance</h3>
+  <p>Change how SiBalance looks without changing any budget data.</p>
   <ul>
-    <li><strong>Reset App Tips:</strong> show Dashboard, Income, and Expenses tips again</li>
-    <li><strong>User Guide:</strong> open the SiBalance help guide in your browser</li>
-    <li><strong>Feedback &amp; Bug Reports:</strong> send feedback or report a problem by email</li>
+    <li>
+      <strong>Light:</strong> always uses the app's light appearance.
+    </li>
+    <li>
+      <strong>Dark:</strong> always uses the app's dark appearance.
+    </li>
+    <li>
+      <strong>System:</strong> follows your iPhone's current Light or Dark Mode
+      setting and changes with it automatically.
+    </li>
+    <li>
+      <strong>Theme:</strong> chooses the app's colour palette. The available
+      themes are Horizon, Grove, Lunar, and Mistberry; this is separate from the
+      Light, Dark, or System appearance choice.
+    </li>
+    <li>
+      <strong>App Icon:</strong> chooses the Light or Dark SiBalance icon shown on
+      the iPhone Home Screen and in the App Library.
+    </li>
+  </ul>
+
+  <h3>Accessibility</h3>
+  <ul>
+    <li>
+      <strong>Reduce Motion:</strong> stops SiBalance's animated Dashboard weather,
+      moving background, and animated icons. The app also respects the Reduce
+      Motion preference in iOS.
+    </li>
+    <li>
+      <strong>iOS Settings:</strong> reminds you that text size, VoiceOver, contrast,
+      and other system-wide accessibility choices are managed in the iPhone
+      Settings app. SiBalance supports those iOS features where available.
+    </li>
+  </ul>
+
+  <h3>Help and Support</h3>
+  <ul>
+    <li>
+      <strong>Reset App Tips:</strong> makes the in-app walkthrough tips appear
+      again. Choose all tips or only the Dashboard, Income, Expense, Goals, or
+      Insights guide. This does not reset any budget data.
+    </li>
+    <li>
+      <strong>User Guide:</strong> opens this guide in your web browser.
+    </li>
+    <li>
+      <strong>Feedback &amp; Bug Reports:</strong> opens a new email addressed to
+      SiBalance support so you can send feedback or describe a problem.
+    </li>
   </ul>
 
   <h3>Data</h3>
-  <p>Use Data settings for permanent actions.</p>
-  <p>
-    <strong>Delete iCloud Data</strong> removes SiBalance data from iCloud while
-    keeping this device local.
-  </p>
-  <p>
-    <strong>Delete All Data</strong> removes all saved budget data from this app.
-    This action cannot be undone.
-  </p>
+  <p>These are destructive actions. Read the confirmation message before continuing.</p>
+  <ul>
+    <li>
+      <strong>Delete iCloud Data:</strong> turns off iCloud Sync, removes SiBalance's
+      stored data from iCloud, and keeps the current data on this device available
+      locally. Other devices will no longer be able to retrieve the deleted cloud
+      copy.
+    </li>
+    <li>
+      <strong>Delete All Data:</strong> clears budgets, entries, goals, settings,
+      insights, and reports, then returns SiBalance to its first-time setup screen.
+      You must type the confirmation word and approve a final warning. If iCloud
+      Sync is on, this also deletes the SiBalance data in iCloud; if sync is off,
+      it deletes only the local data on this device. This action cannot be undone.
+    </li>
+  </ul>
+
+  <h3>Settings Footer</h3>
+  <ul>
+    <li><strong>Privacy Policy:</strong> opens SiBalance's privacy policy in your browser.</li>
+    <li><strong>Terms of Service:</strong> opens SiBalance's terms in your browser.</li>
+    <li><strong>App Version and Build:</strong> identifies the exact installed version, which is useful when contacting support.</li>
+  </ul>
 
   <hr>
 
