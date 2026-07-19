@@ -509,7 +509,7 @@ html[data-theme="light"] .trust-strip {
 .feature-screen-back {
   z-index: 1;
   opacity: 0.72;
-  transform: translate3d(-62px, 18px, 0) scale(0.94);
+  transform: translate3d(-62px, -12px, 0) scale(0.94);
 }
 
 .feature-screen-front {
@@ -884,7 +884,7 @@ html[data-theme="light"] .landing-footer {
   }
 
   .feature-screen-back {
-    transform: translate3d(-36px, 14px, 0) scale(0.94);
+    transform: translate3d(-36px, -5px, 0) scale(0.94);
   }
 
   .feature-screen-front {
@@ -957,7 +957,7 @@ html[data-theme="light"] .landing-footer {
   }
 
   .feature-screen-back {
-    transform: translate3d(-30px, 12px, 0) scale(0.94);
+    transform: translate3d(-30px, -5px, 0) scale(0.94);
   }
 
   .feature-screen-front {
@@ -987,7 +987,7 @@ html[data-theme="light"] .landing-footer {
   }
 
   .feature-visual-stack:hover .feature-screen-back {
-    transform: translate3d(-66px, 14px, 0) scale(0.94);
+    transform: translate3d(-66px, -16px, 0) scale(0.94);
   }
 
   .feature-visual-stack:hover .feature-screen-front {
