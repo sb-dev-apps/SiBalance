@@ -255,6 +255,7 @@ html[data-theme="light"] .hero-section {
 
 .hero-copy {
   position: relative;
+  top: 24px;
   z-index: 2;
   max-width: 740px;
   opacity: var(--hero-copy-opacity, 1);
@@ -806,6 +807,7 @@ html[data-theme="light"] .landing-footer {
   }
 
   .hero-copy {
+    top: 0;
     max-width: 570px;
     margin-inline: auto;
   }
