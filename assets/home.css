@@ -312,7 +312,7 @@ html[data-theme="light"] .hero-lede {
   position: relative;
   align-self: end;
   height: 540px;
-  margin-bottom: -56px;
+  margin-bottom: -16px;
   display: grid;
   place-items: start center;
   opacity: var(--hero-visual-opacity, 1);
