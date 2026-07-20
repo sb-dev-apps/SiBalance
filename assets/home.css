@@ -104,7 +104,8 @@ html[data-theme="light"] .landing-header {
   gap: 24px;
 }
 
-.landing-header .brand {
+.landing-header .brand,
+.landing-footer .brand {
   display: inline-flex;
   align-items: center;
   gap: 11px;
@@ -115,7 +116,8 @@ html[data-theme="light"] .landing-header {
   text-decoration: none;
 }
 
-.landing-header .app-mark {
+.landing-header .app-mark,
+.landing-footer .app-mark {
   border-radius: 8px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
 }
@@ -683,7 +685,7 @@ html[data-theme="light"] .landing-footer {
   font-size: 1.1em;
 }
 
-.home-page .social-icon {
+.landing-footer .social-icon {
   color: var(--home-muted);
 }
 
