@@ -243,6 +243,8 @@ html[data-theme="light"] .hero-section {
 }
 
 .hero-layout {
+  position: relative;
+  top: -24px;
   min-height: 600px;
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
@@ -795,6 +797,7 @@ html[data-theme="light"] .landing-footer {
   }
 
   .hero-layout {
+    top: 0;
     min-height: auto;
     grid-template-columns: 1fr;
     gap: 20px;
