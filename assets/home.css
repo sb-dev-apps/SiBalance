@@ -116,6 +116,12 @@ html[data-theme="light"] .landing-header {
   text-decoration: none;
 }
 
+.landing-footer .brand {
+  width: max-content;
+  justify-self: center;
+  margin-inline: auto;
+}
+
 .landing-header .app-mark,
 .landing-footer .app-mark {
   border-radius: 8px;
