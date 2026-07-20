@@ -8,6 +8,10 @@
   --brand-dark: #071734;
   --accent: #bd39ef;
   --accent-blue: #3e74ff;
+  --home-text: #f8fbff;
+  --home-muted: #aabbdc;
+  --home-line: rgba(142, 177, 238, 0.2);
+  --home-cyan: #30d7f3;
 }
 
 html {
@@ -16,6 +20,9 @@ html {
 
 html[data-theme="light"] {
   color-scheme: light;
+  --home-text: #061633;
+  --home-muted: #43577d;
+  --home-line: rgba(38, 77, 139, 0.18);
 }
 
 * {

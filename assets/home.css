@@ -104,7 +104,7 @@ html[data-theme="light"] .landing-header {
   gap: 24px;
 }
 
-.home-page .brand {
+.landing-header .brand {
   display: inline-flex;
   align-items: center;
   gap: 11px;
@@ -115,7 +115,7 @@ html[data-theme="light"] .landing-header {
   text-decoration: none;
 }
 
-.home-page .app-mark {
+.landing-header .app-mark {
   border-radius: 8px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
 }
@@ -146,7 +146,7 @@ html[data-theme="light"] .landing-header {
   color: var(--home-cyan);
 }
 
-.home-page .theme-toggle {
+.landing-header .theme-toggle {
   position: static;
   min-height: 38px;
   border-color: var(--home-line);
@@ -155,7 +155,7 @@ html[data-theme="light"] .landing-header {
   backdrop-filter: none;
 }
 
-html[data-theme="light"] .home-page .theme-toggle {
+html[data-theme="light"] .landing-header .theme-toggle {
   background: rgba(6, 22, 51, 0.05);
 }
 
