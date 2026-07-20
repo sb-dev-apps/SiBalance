@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support SiBalance</title>
+  <title>About Simon & Support SiBalance</title>
   <link rel="canonical" href="https://sibalance.app/donate.html">
   <link rel="icon" href="assets/sibalance-logo.png" type="image/png">
-  <meta name="description" content="Support SiBalance and its independent development with an optional Bitcoin donation.">
+  <meta name="description" content="Meet Simon, the independent developer behind SiBalance, and learn how to support the app through reviews, recommendations or an optional Bitcoin donation.">
   <meta name="theme-color" content="#04122f">
 
   <style>
@@ -34,6 +34,88 @@
     .donate-lede {
       max-width: 680px;
       font-size: 1.15rem;
+    }
+
+    .about-story {
+      max-width: 760px;
+    }
+
+    .about-story blockquote {
+      margin: 2rem 0;
+      padding: 0.2rem 0 0.2rem 1.4rem;
+      border-left: 3px solid #35d6ff;
+    }
+
+    .about-story blockquote p {
+      margin: 0 0 0.45rem;
+      color: #f8fbff;
+      font-size: 1.18rem;
+      font-style: italic;
+    }
+
+    .about-story blockquote cite {
+      color: #9eb0d2;
+      font-size: 0.9rem;
+      font-style: normal;
+    }
+
+    .support-section {
+      margin-top: 2.5rem;
+    }
+
+    .support-section h2 {
+      margin-bottom: 0.6rem;
+    }
+
+    .support-options {
+      max-width: 760px;
+      margin: 1.7rem 0 0;
+      padding: 0;
+      border-bottom: 1px solid rgba(146, 183, 255, 0.2);
+      list-style: none;
+    }
+
+    .support-options li {
+      border-top: 1px solid rgba(146, 183, 255, 0.2);
+    }
+
+    .support-options a {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 2px;
+      color: #f8fbff;
+      text-decoration: none;
+    }
+
+    .support-options a:hover .support-option-title {
+      color: #35d6ff;
+    }
+
+    .support-option-icon {
+      color: #35d6ff;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+
+    .support-option-copy {
+      display: grid;
+      gap: 2px;
+    }
+
+    .support-option-title {
+      font-weight: 700;
+    }
+
+    .support-option-detail {
+      color: #9eb0d2;
+      font-size: 0.9rem;
+    }
+
+    .support-option-arrow {
+      color: #35d6ff;
+      font-size: 1.25rem;
     }
 
     .donation-details {
@@ -158,8 +240,20 @@
 
     html[data-theme="light"] .copy-status,
     html[data-theme="light"] .donation-note,
-    html[data-theme="light"] .qr-panel p {
+    html[data-theme="light"] .qr-panel p,
+    html[data-theme="light"] .about-story blockquote cite,
+    html[data-theme="light"] .support-option-detail {
       color: #5f6f91 !important;
+    }
+
+    html[data-theme="light"] .about-story blockquote p,
+    html[data-theme="light"] .support-options a {
+      color: #071734;
+    }
+
+    html[data-theme="light"] .support-options,
+    html[data-theme="light"] .support-options li {
+      border-color: rgba(62, 116, 255, 0.18);
     }
 
     html[data-theme="light"] .bitcoin-button.secondary {
@@ -177,6 +271,11 @@
 
       .donate-lede {
         font-size: 1.05rem;
+      }
+
+      .support-options a {
+        grid-template-columns: 28px minmax(0, 1fr) auto;
+        gap: 10px;
       }
     }
   </style>
@@ -209,17 +308,73 @@
 
     <main class="document donate-document">
       <div class="donate-intro">
-        <p class="donate-kicker">Built independently</p>
-        <h1>Support SiBalance</h1>
+        <p class="donate-kicker">Independent developer</p>
+        <h1>About Me</h1>
       </div>
 
-      <p class="donate-lede">SiBalance is designed, built and maintained by me as a solo indie developer. If the app helps you and you would like to support its continued development, you can make an optional Bitcoin donation.</p>
+      <section class="about-story" aria-label="About Simon">
+        <p class="donate-lede">Hi, I'm Simon, the independent developer behind <strong>SiBalance</strong>.</p>
 
-      <p>Your support helps me spend more time improving SiBalance, testing new releases, maintaining the website and continuing to build a private budgeting app without ads, tracking or a recurring subscription.</p>
+        <p>I believe budgeting should be simple, private and completely under your control. That's why I built SiBalance without subscriptions, without ads and without bank connections.</p>
 
-      <p>Donations are entirely optional and do not unlock features or affect the support you receive.</p>
+        <p>Every line of code, every screen and every feature has been designed and developed by me.</p>
+
+        <p>Releasing SiBalance is something I've dreamed about for nearly ten years.</p>
+
+        <p>It wasn't ten years of writing code every day. It was ten years of starting, stopping, abandoning the idea, picking it up again, redesigning it and wondering whether I'd ever actually finish it.</p>
+
+        <p>As John Lennon once wrote:</p>
+
+        <blockquote>
+          <p>“Life is what happens to you while you're busy making other plans.”</p>
+          <cite>John Lennon</cite>
+        </blockquote>
+
+        <p>That quote has always resonated with me.</p>
+
+        <p>Life took me in some unexpected directions, and there were periods when software had to take a back seat to much more important things. There were times when finishing this app felt impossible.</p>
+
+        <p>But I never completely let go of the dream.</p>
+
+        <p>Whenever I could, I'd come back to it—late at night, early in the morning, or whenever life allowed. Little by little, SiBalance became the app I'd always wanted to build.</p>
+
+        <p>Today, I'm incredibly proud to finally share it with the world.</p>
+
+        <p>SiBalance isn't backed by a large company, investors or a team of developers. It's simply the result of one person refusing to give up on an idea they believed in.</p>
+
+        <p>If you've purchased the app, left a review, recommended it to someone else or simply visited this website, thank you. Your support genuinely means more than you probably realise.</p>
+      </section>
 
       <hr>
+
+      <section class="support-section" aria-labelledby="support-heading">
+        <p class="donate-kicker">Help the app grow</p>
+        <h2 id="support-heading">Support SiBalance</h2>
+        <p>If you've found SiBalance useful and would like to support its continued development, the best ways are to leave a review, recommend it to someone else or make a voluntary Bitcoin donation.</p>
+
+        <ul class="support-options" aria-label="Ways to support SiBalance">
+          <li>
+            <a href="https://apps.apple.com/app/sibalance/id6776341469" target="_blank" rel="noopener noreferrer">
+              <span class="support-option-icon" aria-hidden="true">★</span>
+              <span class="support-option-copy">
+                <span class="support-option-title">Leave an App Store review</span>
+                <span class="support-option-detail">Share your experience with other iPhone users.</span>
+              </span>
+              <span class="support-option-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://apps.apple.com/app/sibalance/id6776341469" target="_blank" rel="noopener noreferrer">
+              <span class="support-option-icon" aria-hidden="true">♥</span>
+              <span class="support-option-copy">
+                <span class="support-option-title">Recommend SiBalance to a friend</span>
+                <span class="support-option-detail">Open the App Store page to share SiBalance.</span>
+              </span>
+              <span class="support-option-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+        </ul>
+      </section>
 
       <section class="donation-details" aria-labelledby="bitcoin-heading">
         <h2 class="bitcoin-heading" id="bitcoin-heading">
