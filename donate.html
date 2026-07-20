@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support SiBalance</title>
+  <link rel="canonical" href="https://sibalance.app/donate.html">
+  <link rel="icon" href="assets/sibalance-logo.png" type="image/png">
+  <meta name="description" content="Support SiBalance and its independent development with an optional Bitcoin donation.">
+  <meta name="theme-color" content="#04122f">
+
+  <style>
+    .donate-document {
+      padding: 48px;
+    }
+
+    .donate-intro {
+      display: grid;
+      grid-template-columns: 84px minmax(0, 1fr);
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 2rem;
+    }
+
+    .bitcoin-mark {
+      display: inline-flex;
+      width: 84px;
+      height: 84px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #ffffff;
+      background: #f7931a;
+      box-shadow: 0 18px 38px rgba(247, 147, 26, 0.24);
+      font-family: Arial, sans-serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .donate-intro h1 {
+      margin: 0 0 0.4rem;
+    }
+
+    .donate-kicker {
+      margin: 0;
+      color: #35d6ff !important;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .donate-lede {
+      max-width: 680px;
+      font-size: 1.15rem;
+    }
+
+    .donation-details {
+      margin-top: 2.5rem;
+    }
+
+    .donation-details h2 {
+      margin-top: 0;
+    }
+
+    .bitcoin-label {
+      display: block;
+      margin-bottom: 0.55rem;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .bitcoin-address {
+      display: block;
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid rgba(146, 183, 255, 0.28);
+      border-radius: 6px;
+      color: #f8fbff;
+      background: rgba(2, 8, 23, 0.48);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+      user-select: all;
+    }
+
+    .bitcoin-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .copy-bitcoin {
+      min-height: 44px;
+      padding: 10px 17px;
+      border: 1px solid #35d6ff;
+      border-radius: 6px;
+      color: #031126;
+      background: #35d6ff;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .copy-bitcoin:hover {
+      filter: brightness(1.06);
+    }
+
+    .copy-bitcoin:focus-visible {
+      outline: 3px solid rgba(53, 214, 255, 0.42);
+      outline-offset: 3px;
+    }
+
+    .copy-status {
+      min-height: 1.5em;
+      color: #9eb0d2;
+      font-size: 0.92rem;
+    }
+
+    .donation-note {
+      margin-top: 1.4rem;
+      color: #9eb0d2 !important;
+      font-size: 0.92rem;
+    }
+
+    html[data-theme="light"] .donate-kicker {
+      color: #08718a !important;
+    }
+
+    html[data-theme="light"] .bitcoin-address {
+      border-color: rgba(62, 116, 255, 0.2);
+      color: #071734;
+      background: #f5f8ff;
+    }
+
+    html[data-theme="light"] .copy-status,
+    html[data-theme="light"] .donation-note {
+      color: #5f6f91 !important;
+    }
+
+    @media (max-width: 720px) {
+      .donate-document {
+        padding: 28px 22px;
+      }
+
+      .donate-intro {
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      .bitcoin-mark {
+        width: 58px;
+        height: 58px;
+        font-size: 2.25rem;
+      }
+
+      .donate-intro h1 {
+        font-size: 2rem;
+      }
+
+      .donate-lede {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+  <script src="assets/theme.js?v=4"></script>
+  <link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="SiBalance home">
+        <img class="app-mark" src="assets/sibalance-logo.png" alt="" width="42" height="42">
+        <span>SiBalance</span>
+      </a>
+
+      <div class="header-actions">
+        <nav aria-label="Site navigation">
+          <a href="support.html">Support</a>
+          <a href="user-guide.html">User Guide</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="donate.html" aria-current="page">Donate</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-text">Light</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="document donate-document">
+      <div class="donate-intro">
+        <span class="bitcoin-mark" aria-hidden="true">₿</span>
+        <div>
+          <p class="donate-kicker">Built independently</p>
+          <h1>Support SiBalance</h1>
+        </div>
+      </div>
+
+      <p class="donate-lede">SiBalance is designed, built and maintained by me as a solo indie developer. If the app helps you and you would like to support its continued development, you can make an optional Bitcoin donation.</p>
+
+      <p>Your support helps me spend more time improving SiBalance, testing new releases, maintaining the website and continuing to build a private budgeting app without ads, tracking or a recurring subscription.</p>
+
+      <p>Donations are entirely optional and do not unlock features or affect the support you receive.</p>
+
+      <hr>
+
+      <section class="donation-details" aria-labelledby="bitcoin-heading">
+        <h2 id="bitcoin-heading">Donate with Bitcoin</h2>
+        <span class="bitcoin-label">BTC address</span>
+        <code class="bitcoin-address" id="bitcoin-address">bc1qkp39a7sud8q589nckfc4sssylvgpu7x40t2jy4</code>
+
+        <div class="bitcoin-actions">
+          <button class="copy-bitcoin" type="button" data-copy-bitcoin>Copy BTC address</button>
+          <span class="copy-status" role="status" aria-live="polite"></span>
+        </div>
+
+        <p class="donation-note">Bitcoin transactions cannot be reversed. Always verify the full address before sending. Donations are non-refundable.</p>
+      </section>
+
+      <footer>
+        © 2026 Simon Peter Brown. All rights reserved.
+        <span class="footer-links">
+          <a class="social-icon" href="https://x.com/SiBalanceApp" target="_blank" rel="noopener noreferrer" aria-label="SiBalance on X">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13.9 10.5 21.3 2h-1.8l-6.4 7.4L8 2H2l7.8 11.3L2 22h1.8l6.8-7.8 5.4 7.8h6l-8.1-11.5zm-2.4 2.8-.8-1.1L4.4 3.3h2.8l5 7.1.8 1.1 6.6 9.3h-2.8l-5.3-7.5z"/>
+            </svg>
+          </a>
+        </span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const copyBitcoinButton = document.querySelector("[data-copy-bitcoin]");
+    const bitcoinAddress = document.getElementById("bitcoin-address");
+    const copyStatus = document.querySelector(".copy-status");
+
+    copyBitcoinButton?.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(bitcoinAddress.textContent.trim());
+        copyBitcoinButton.textContent = "Copied";
+        copyStatus.textContent = "Bitcoin address copied.";
+
+        window.setTimeout(() => {
+          copyBitcoinButton.textContent = "Copy BTC address";
+          copyStatus.textContent = "";
+        }, 2400);
+      } catch {
+        copyStatus.textContent = "Copy failed. Select and copy the address manually.";
+      }
+    });
+  </script>
+</body>
+</html>

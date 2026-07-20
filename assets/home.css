@@ -159,7 +159,6 @@ html[data-theme="light"] .home-page .theme-toggle {
   background: rgba(6, 22, 51, 0.05);
 }
 
-.nav-store-button,
 .guide-button {
   display: inline-flex;
   align-items: center;
@@ -176,7 +175,6 @@ html[data-theme="light"] .home-page .theme-toggle {
   text-decoration: none;
 }
 
-.nav-store-button:hover,
 .guide-button:hover {
   background: #70e9fa;
   text-decoration: none;
@@ -698,10 +696,6 @@ html[data-theme="light"] .landing-footer {
     gap: 16px;
   }
 
-  .nav-store-button {
-    display: none;
-  }
-
   .hero-copy h1 {
     font-size: 52px;
   }
@@ -790,10 +784,6 @@ html[data-theme="light"] .landing-footer {
 
   .landing-navigation .theme-toggle {
     align-self: flex-start;
-  }
-
-  .nav-store-button {
-    display: inline-flex;
   }
 
   .hero-layout {
