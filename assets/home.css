@@ -506,6 +506,10 @@ html[data-theme="light"] .trust-strip {
   filter: drop-shadow(0 38px 54px rgba(0, 0, 0, 0.4));
 }
 
+html[data-theme="light"] .feature-visual img {
+  filter: none;
+}
+
 .feature-visual-stack {
   grid-template-columns: minmax(0, 1fr);
 }
