@@ -279,12 +279,24 @@ html[data-theme="light"] .hero-section {
   text-wrap: balance;
 }
 
+.hero-copy h1 span {
+  display: block;
+}
+
 .hero-lede {
   max-width: 690px;
   margin-bottom: 26px;
   color: #c5d4f1;
   font-size: 22px;
   line-height: 1.5;
+}
+
+.hero-lede span {
+  display: block;
+}
+
+.hero-tagline {
+  margin-top: 2px;
 }
 
 html[data-theme="light"] .hero-lede {
@@ -927,7 +939,28 @@ html[data-theme="light"] .landing-footer {
 
 @media (max-width: 430px) {
   .hero-copy h1 {
-    font-size: 40px;
+    max-width: 340px;
+    margin-inline: auto;
+    margin-bottom: 20px;
+    font-size: 35px;
+    line-height: 1.06;
+  }
+
+  .hero-lede {
+    max-width: 340px;
+    margin-inline: auto;
+    margin-bottom: 22px;
+    font-size: 18px;
+    line-height: 1.45;
+    text-wrap: balance;
+  }
+
+  .purchase-note {
+    max-width: 330px;
+    margin: 12px auto 0;
+    font-size: 13px;
+    line-height: 1.45;
+    text-wrap: balance;
   }
 
   .section-label {
@@ -973,6 +1006,16 @@ html[data-theme="light"] .landing-footer {
 
   .privacy-panel {
     padding: 26px;
+  }
+}
+
+@media (max-width: 350px) {
+  .hero-copy h1 {
+    font-size: 30px;
+  }
+
+  .hero-lede {
+    font-size: 17px;
   }
 }
 
