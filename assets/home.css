@@ -935,6 +935,10 @@ html[data-theme="light"] .landing-footer {
   .landing-footer nav {
     justify-content: center;
   }
+
+  .landing-footer .brand {
+    transform: translateX(-8px);
+  }
 }
 
 @media (max-width: 430px) {
