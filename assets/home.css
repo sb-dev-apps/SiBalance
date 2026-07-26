@@ -554,7 +554,7 @@ html[data-theme="light"] .feature-visual img {
 
 .device-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+  grid-template-columns: minmax(280px, 1fr) minmax(360px, 0.85fr);
   align-items: center;
   gap: 74px;
 }
@@ -577,7 +577,9 @@ html[data-theme="light"] .feature-visual img {
 
 .device-visual {
   min-width: 0;
+  width: min(100%, 520px);
   margin: 0;
+  justify-self: center;
 }
 
 .device-visual img {
