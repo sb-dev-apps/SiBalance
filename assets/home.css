@@ -418,57 +418,6 @@ html[data-theme="light"] .trust-strip {
   font-size: 20px;
 }
 
-.ipad-showcase {
-  border-top: 1px solid rgba(142, 177, 238, 0.09);
-  padding-block: 96px 112px;
-  background: var(--home-bg);
-}
-
-.ipad-showcase-copy {
-  max-width: 720px;
-  margin: 0 auto 58px;
-  text-align: center;
-}
-
-.ipad-showcase-copy h2 {
-  margin-bottom: 20px;
-  font-size: 48px;
-  line-height: 1.08;
-  text-wrap: balance;
-}
-
-.ipad-showcase-copy > p:last-child {
-  color: var(--home-muted);
-  font-size: 20px;
-}
-
-.ipad-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
-  gap: 32px;
-}
-
-.ipad-gallery figure {
-  min-width: 0;
-  margin: 0;
-}
-
-.ipad-gallery-dashboard {
-  grid-column: 1 / -1;
-}
-
-.ipad-gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 30px 48px rgba(0, 0, 0, 0.3));
-}
-
-html[data-theme="light"] .ipad-gallery img {
-  filter: none;
-}
-
 .feature-section {
   border-top: 1px solid rgba(142, 177, 238, 0.09);
   background: var(--home-bg-deep);
@@ -573,6 +522,10 @@ html[data-theme="light"] .feature-visual img {
   filter: none;
 }
 
+.feature-visual-ipad img {
+  width: min(100%, 470px);
+}
+
 .feature-visual-stack {
   grid-template-columns: minmax(0, 1fr);
 }
@@ -591,6 +544,51 @@ html[data-theme="light"] .feature-visual img {
 .feature-screen-front {
   z-index: 2;
   transform: translate3d(64px, -4px, 0) scale(0.96);
+}
+
+.device-section {
+  border-top: 1px solid rgba(142, 177, 238, 0.09);
+  padding-block: 108px;
+  background: var(--home-bg);
+}
+
+.device-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: 74px;
+}
+
+.device-copy {
+  max-width: 480px;
+}
+
+.device-copy h2 {
+  margin-bottom: 20px;
+  font-size: 44px;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.device-copy > p:last-child {
+  color: var(--home-muted);
+  font-size: 20px;
+}
+
+.device-visual {
+  min-width: 0;
+  margin: 0;
+}
+
+.device-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 30px 48px rgba(0, 0, 0, 0.3));
+}
+
+html[data-theme="light"] .device-visual img {
+  filter: none;
 }
 
 .privacy-section {
@@ -788,7 +786,7 @@ html[data-theme="light"] .landing-footer {
 
   .feature-copy h2,
   .features-intro h2,
-  .ipad-showcase-copy h2,
+  .device-copy h2,
   .privacy-panel h2,
   .purchase-panel h2,
   .final-cta h2 {
@@ -912,18 +910,6 @@ html[data-theme="light"] .landing-footer {
     padding-block: 84px 50px;
   }
 
-  .ipad-showcase {
-    padding-block: 76px 82px;
-  }
-
-  .ipad-showcase-copy {
-    margin-bottom: 42px;
-  }
-
-  .ipad-gallery {
-    gap: 18px;
-  }
-
   .feature-row,
   .feature-row-reverse {
     min-height: 0;
@@ -943,7 +929,7 @@ html[data-theme="light"] .landing-footer {
 
   .feature-copy h2,
   .features-intro h2,
-  .ipad-showcase-copy h2,
+  .device-copy h2,
   .privacy-panel h2,
   .purchase-panel h2,
   .final-cta h2 {
@@ -952,7 +938,7 @@ html[data-theme="light"] .landing-footer {
 
   .feature-copy > p:not(.feature-number),
   .features-intro > p:last-child,
-  .ipad-showcase-copy > p:last-child {
+  .device-copy > p:last-child {
     font-size: 18px;
   }
 
@@ -962,6 +948,10 @@ html[data-theme="light"] .landing-footer {
 
   .feature-visual img {
     width: 300px;
+  }
+
+  .feature-visual-ipad img {
+    width: min(100%, 430px);
   }
 
   .feature-visual-stack img {
@@ -974,6 +964,24 @@ html[data-theme="light"] .landing-footer {
 
   .feature-screen-front {
     transform: translate3d(36px, -2px, 0) scale(0.96);
+  }
+
+  .device-section {
+    padding-block: 82px;
+  }
+
+  .device-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .device-copy {
+    max-width: 600px;
+  }
+
+  .device-visual {
+    width: min(100%, 680px);
+    margin-inline: auto;
   }
 
   .privacy-section,
@@ -1048,25 +1056,11 @@ html[data-theme="light"] .landing-footer {
 
   .feature-copy h2,
   .features-intro h2,
-  .ipad-showcase-copy h2,
+  .device-copy h2,
   .privacy-panel h2,
   .purchase-panel h2,
   .final-cta h2 {
     font-size: 32px;
-  }
-
-  .ipad-gallery {
-    grid-template-columns: 1fr;
-    gap: 26px;
-  }
-
-  .ipad-gallery-dashboard {
-    grid-column: auto;
-  }
-
-  .ipad-gallery figure:not(.ipad-gallery-dashboard) {
-    width: min(100%, 330px);
-    margin-inline: auto;
   }
 
   .feature-visual {
