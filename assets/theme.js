@@ -20,7 +20,16 @@
 
   function applyTheme(theme) {
     var nextTheme = theme === "light" ? "light" : "dark";
+    var iconPath = "assets/sibalance-logo-" + nextTheme + ".png";
     root.dataset.theme = nextTheme;
+
+    Array.prototype.slice.call(document.querySelectorAll(".app-mark")).forEach(function (image) {
+      image.setAttribute("src", iconPath);
+    });
+
+    Array.prototype.slice.call(document.querySelectorAll('link[rel~="icon"]')).forEach(function (link) {
+      link.setAttribute("href", iconPath);
+    });
 
     Array.prototype.slice.call(document.querySelectorAll(".theme-toggle")).forEach(function (button) {
       var label = nextTheme === "light" ? "Dark" : "Light";
