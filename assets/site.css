@@ -199,15 +199,27 @@ footer,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   color: #c9d9ff;
 }
 
-.social-icon svg {
+.social-icon-mark {
+  display: block;
   width: 20px;
   height: 20px;
-  fill: currentColor;
+  background-color: currentColor;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.social-icon-x {
+  mask-image: url("x.svg");
+}
+
+.social-icon-tiktok {
+  mask-image: url("tiktok.svg");
 }
 
 .social-icon:hover {
