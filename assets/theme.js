@@ -20,7 +20,7 @@
 
   function applyTheme(theme) {
     var nextTheme = theme === "light" ? "light" : "dark";
-    var iconPath = "assets/sibalance-logo-" + nextTheme + ".png";
+    var iconPath = "/assets/sibalance-logo-" + nextTheme + ".png";
     root.dataset.theme = nextTheme;
 
     Array.prototype.slice.call(document.querySelectorAll(".app-mark")).forEach(function (image) {

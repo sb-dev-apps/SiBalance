@@ -784,6 +784,22 @@ html[data-theme="light"] .newsletter-panel {
   margin-inline: auto !important;
 }
 
+.newsletter-fallback {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--home-line);
+  border-radius: 8px;
+  padding: 28px;
+  color: var(--home-cyan) !important;
+  text-align: center;
+}
+
+.newsletter-embed:has(.formkit-form) .newsletter-fallback {
+  display: none;
+}
+
 .landing-footer {
   border-top: 1px solid var(--home-line);
   padding-block: 34px;
