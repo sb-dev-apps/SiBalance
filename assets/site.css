@@ -222,6 +222,10 @@ footer,
   mask-image: url("tiktok.svg");
 }
 
+.social-icon-youtube {
+  mask-image: url("youtube.svg");
+}
+
 .social-icon:hover {
   color: #35d6ff;
 }
