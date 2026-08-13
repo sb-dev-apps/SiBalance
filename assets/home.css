@@ -700,18 +700,102 @@ html[data-theme="light"] .privacy-panel {
 .purchase-panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
+  gap: 42px;
   align-items: center;
 }
 
-.purchase-panel > div > p:not(.section-label) {
+.purchase-intro > p:not(.section-label) {
   max-width: 760px;
   color: var(--home-muted);
   font-size: 19px;
 }
 
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.plan-card {
+  border: 1px solid var(--home-line);
+  border-radius: 12px;
+  padding: 34px;
+  background: rgba(9, 27, 61, 0.58);
+}
+
+html[data-theme="light"] .plan-card {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.plan-card-full {
+  border-color: rgba(48, 215, 243, 0.48);
+  background:
+    radial-gradient(circle at 90% 0%, rgba(48, 215, 243, 0.14), transparent 35%),
+    rgba(9, 27, 61, 0.8);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="light"] .plan-card-full {
+  background:
+    radial-gradient(circle at 90% 0%, rgba(48, 215, 243, 0.18), transparent 38%),
+    #fff;
+}
+
+.plan-name {
+  margin-bottom: 10px;
+  color: var(--home-cyan);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.plan-card h3 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.plan-card ul {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  color: var(--home-muted);
+  list-style: none;
+}
+
+.plan-card li {
+  position: relative;
+  padding-left: 26px;
+}
+
+.plan-card li::before {
+  position: absolute;
+  left: 0;
+  color: var(--home-green);
+  font-weight: 800;
+  content: "✓";
+}
+
 .lifetime-update-note {
+  margin: 24px 0 0;
   color: var(--home-text) !important;
   font-weight: 750;
+}
+
+.no-subscription-note {
+  margin: -4px 0 0;
+  color: var(--home-text);
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.existing-customer-note {
+  max-width: 780px;
+  margin: -24px auto 0;
+  color: var(--home-soft);
+  font-size: 14px;
+  text-align: center;
 }
 
 .final-cta {
@@ -1144,6 +1228,10 @@ html[data-theme="light"] .landing-footer {
     gap: 42px;
   }
 
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+
   .privacy-panel {
     padding: 34px;
   }
@@ -1209,6 +1297,14 @@ html[data-theme="light"] .landing-footer {
   .purchase-panel h2,
   .final-cta h2 {
     font-size: 32px;
+  }
+
+  .plan-card {
+    padding: 28px 24px;
+  }
+
+  .plan-card h3 {
+    font-size: 25px;
   }
 
   .feature-visual {
