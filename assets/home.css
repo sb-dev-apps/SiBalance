@@ -787,7 +787,7 @@ html[data-theme="light"] .plan-card-full {
   content: "✓";
 }
 
-.lifetime-update-note {
+.plan-card .lifetime-update-note {
   margin: 40px 0 0;
   color: var(--home-text) !important;
   font-weight: 750;
