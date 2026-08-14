@@ -853,109 +853,6 @@ html[data-theme="light"] .final-cta {
   color: #031027 !important;
 }
 
-.newsletter-section {
-  padding-block: 72px;
-  background: var(--home-bg-deep);
-}
-
-.newsletter-panel {
-  border: 1px solid var(--home-line);
-  border-radius: 12px;
-  padding: 48px;
-  background: rgba(9, 27, 61, 0.56);
-}
-
-html[data-theme="light"] .newsletter-panel {
-  background: rgba(255, 255, 255, 0.72);
-}
-
-.newsletter-embed {
-  width: min(100%, 680px);
-  min-height: 260px;
-  margin-inline: auto;
-}
-
-.newsletter-embed .formkit-form {
-  margin-inline: auto !important;
-}
-
-.newsletter-embed .formkit-form[data-uid="a41d24e9e3"] {
-  border-color: var(--home-line) !important;
-  border-radius: 10px !important;
-  color: var(--home-text) !important;
-  background: var(--home-surface) !important;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
-}
-
-.newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-header,
-.newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-subheader,
-.newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-guarantee {
-  color: var(--home-text) !important;
-}
-
-.newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-subheader,
-.newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-guarantee {
-  color: var(--home-muted) !important;
-}
-
-.newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-input {
-  border-color: var(--home-line) !important;
-  border-radius: 7px !important;
-  color: var(--home-text) !important;
-  background: #061735 !important;
-}
-
-.newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-input::placeholder {
-  color: var(--home-muted) !important;
-  opacity: 1 !important;
-}
-
-.newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-input:focus {
-  border-color: var(--home-cyan) !important;
-  box-shadow: 0 0 0 3px rgba(48, 215, 243, 0.16);
-}
-
-.newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-submit {
-  border-radius: 7px !important;
-  color: #031027 !important;
-  background: var(--home-cyan) !important;
-  font-weight: 750 !important;
-}
-
-.newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-powered-by-convertkit {
-  filter: invert(1) brightness(1.5);
-}
-
-html[data-theme="light"] .newsletter-embed .formkit-form[data-uid="a41d24e9e3"] {
-  background: var(--home-surface) !important;
-  box-shadow: 0 24px 60px rgba(7, 23, 52, 0.1);
-}
-
-html[data-theme="light"] .newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-input {
-  color: var(--home-text) !important;
-  background: #f5f8ff !important;
-}
-
-html[data-theme="light"] .newsletter-embed .formkit-form[data-uid="a41d24e9e3"] .formkit-powered-by-convertkit {
-  filter: none;
-}
-
-.newsletter-fallback {
-  min-height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--home-line);
-  border-radius: 8px;
-  padding: 28px;
-  color: var(--home-cyan) !important;
-  text-align: center;
-}
-
-.newsletter-embed:has(.formkit-form) .newsletter-fallback {
-  display: none;
-}
-
 .landing-footer {
   border-top: 1px solid var(--home-line);
   padding-block: 34px;
@@ -1224,13 +1121,8 @@ html[data-theme="light"] .landing-footer {
 
   .privacy-section,
   .purchase-section,
-  .final-cta,
-  .newsletter-section {
+  .final-cta {
     padding-block: 80px;
-  }
-
-  .newsletter-panel {
-    padding: 36px 28px;
   }
 
   .privacy-panel,
@@ -1347,13 +1239,6 @@ html[data-theme="light"] .landing-footer {
     padding: 26px;
   }
 
-  .newsletter-section {
-    padding-block: 56px;
-  }
-
-  .newsletter-panel {
-    padding: 28px 18px;
-  }
 }
 
 @media (max-width: 350px) {
