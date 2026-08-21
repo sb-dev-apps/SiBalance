@@ -311,6 +311,28 @@ html[data-theme="light"] .hero-lede {
   transform: translateY(-2px);
 }
 
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.hero-secondary-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--home-muted);
+  font-size: 15px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.hero-secondary-link:hover {
+  color: var(--home-cyan);
+}
+
 .store-badge {
   display: block;
   width: 180px;
@@ -1014,6 +1036,10 @@ html[data-theme="light"] .landing-footer {
 
   .hero-lede {
     font-size: 19px;
+  }
+
+  .hero-actions {
+    justify-content: center;
   }
 
   .hero-visual {
