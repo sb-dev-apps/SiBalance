@@ -900,6 +900,34 @@ html[data-theme="light"] .landing-footer {
   font-size: 14px;
 }
 
+.footer-links {
+  min-width: 0;
+  display: grid;
+  gap: 9px;
+}
+
+.footer-links nav {
+  justify-content: center;
+}
+
+.footer-learn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.footer-learn-label {
+  color: var(--home-soft);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.footer-learn a {
+  font-size: 13px;
+}
+
 .landing-footer p {
   margin: 0;
   color: var(--home-soft);
@@ -1177,6 +1205,10 @@ html[data-theme="light"] .landing-footer {
 
   .landing-footer .brand {
     transform: translateX(-8px);
+  }
+
+  .footer-links {
+    justify-items: center;
   }
 }
 
