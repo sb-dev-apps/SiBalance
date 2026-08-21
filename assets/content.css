@@ -139,6 +139,7 @@ html[data-theme="light"] .content-page {
   position: relative;
   max-width: 100%;
   width: auto;
+  height: auto;
   max-height: 540px;
   display: block;
   filter: drop-shadow(0 34px 50px rgba(0, 0, 0, 0.38));
@@ -396,6 +397,7 @@ html[data-theme="light"] .content-media {
 .content-media img {
   max-width: 100%;
   width: auto;
+  height: auto;
   max-height: 590px;
   filter: drop-shadow(0 28px 42px rgba(0, 0, 0, 0.34));
 }
