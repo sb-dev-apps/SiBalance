@@ -176,8 +176,8 @@ html[data-theme="light"] .content-media img {
   max-width: 840px;
 }
 
-.content-byline {
-  margin: 22px 0 0;
+.guide-hero .content-byline {
+  margin: 34px 0 0;
   color: var(--home-soft);
   font-size: 14px;
   font-weight: 650;
