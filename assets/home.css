@@ -339,8 +339,8 @@ html[data-theme="light"] .hero-lede {
   height: auto;
 }
 
-.purchase-note {
-  margin: 13px 0 0;
+.hero-copy .purchase-note {
+  margin: 28px 0 0;
   color: var(--home-soft);
   font-size: 14px;
 }
@@ -1230,9 +1230,9 @@ html[data-theme="light"] .landing-footer {
     text-wrap: balance;
   }
 
-  .purchase-note {
+  .hero-copy .purchase-note {
     max-width: 330px;
-    margin: 12px auto 0;
+    margin: 24px auto 0;
     font-size: 13px;
     line-height: 1.45;
     text-wrap: balance;
