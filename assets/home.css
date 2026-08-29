@@ -647,6 +647,10 @@ html[data-theme="light"] .feature-visual img {
   font-size: 11px;
 }
 
+.home-security-data-note {
+  width: min(100%, 300px);
+}
+
 .feature-screen-back {
   z-index: 1;
   opacity: 0.72;
