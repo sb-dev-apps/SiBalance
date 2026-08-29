@@ -605,6 +605,11 @@ html[data-theme="light"] .feature-visual img {
   margin-top: -32px;
 }
 
+.security-data-note {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
 .feature-screen-back {
   z-index: 1;
   opacity: 0.72;
