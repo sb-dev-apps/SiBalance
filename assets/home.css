@@ -601,6 +601,10 @@ html[data-theme="light"] .feature-visual img {
   grid-area: 2 / 1;
 }
 
+.device-visual > .example-data-note {
+  margin-top: -32px;
+}
+
 .feature-screen-back {
   z-index: 1;
   opacity: 0.72;
