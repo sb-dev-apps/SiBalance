@@ -214,6 +214,10 @@ footer,
   mask-size: contain;
 }
 
+.social-icon-x {
+  mask-image: url("x.svg");
+}
+
 .social-icon-tiktok {
   mask-image: url("tiktok.svg");
 }
