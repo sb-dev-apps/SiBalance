@@ -339,6 +339,26 @@ html[data-theme="light"] .hero-lede {
   height: auto;
 }
 
+.example-data-note {
+  position: relative;
+  z-index: 3;
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  margin: 16px 0 0;
+  color: var(--home-soft);
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.hero-visual > .example-data-note {
+  position: absolute;
+  bottom: 18px;
+  margin: 0;
+}
+
 .hero-copy .purchase-note {
   margin: 28px 0 0;
   color: var(--home-soft);
@@ -574,6 +594,11 @@ html[data-theme="light"] .feature-visual img {
 .feature-visual-stack img {
   grid-area: 1 / 1;
   width: min(78%, 310px);
+}
+
+.feature-visual-stack > .example-data-note,
+.device-visual > .example-data-note {
+  grid-area: 2 / 1;
 }
 
 .feature-screen-back {
