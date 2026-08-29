@@ -119,8 +119,10 @@ html[data-theme="light"] .content-page {
   position: relative;
   min-width: 0;
   min-height: 510px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin: 0;
 }
 
@@ -404,9 +406,18 @@ html[data-theme="light"] .content-media {
 
 .content-media figcaption {
   max-width: 620px;
-  margin: 18px auto 0;
+  margin: -64px auto 0;
   color: var(--home-soft);
   font-size: 14px;
+}
+
+.content-media .example-data-note {
+  margin: 0;
+}
+
+.content-media-description {
+  display: block;
+  margin-top: 8px;
 }
 
 .content-table-wrap {
