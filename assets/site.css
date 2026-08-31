@@ -218,6 +218,14 @@ footer,
   mask-image: url("x.svg");
 }
 
+.social-icon-instagram {
+  mask-image: url("instagram.svg");
+}
+
+.social-icon-threads {
+  mask-image: url("threads.svg");
+}
+
 .social-icon-tiktok {
   mask-image: url("tiktok.svg");
 }
