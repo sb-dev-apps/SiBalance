@@ -885,14 +885,6 @@ html[data-theme="light"] .plan-card-full {
   text-align: center;
 }
 
-.existing-customer-note {
-  max-width: 780px;
-  margin: -24px auto 0;
-  color: var(--home-soft);
-  font-size: 14px;
-  text-align: center;
-}
-
 .final-cta {
   padding-block: 110px;
   text-align: center;
