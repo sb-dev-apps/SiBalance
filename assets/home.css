@@ -244,18 +244,18 @@ html[data-theme="light"] .hero-section {
 
 .hero-layout {
   position: relative;
-  top: -24px;
+  top: -56px;
   min-height: 600px;
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
-  align-items: center;
+  align-items: start;
   gap: 72px;
-  padding-block: 58px 34px;
+  padding-block: 32px 34px;
 }
 
 .hero-copy {
   position: relative;
-  top: 24px;
+  top: 96px;
   z-index: 2;
   max-width: 740px;
   opacity: var(--hero-copy-opacity, 1);
@@ -369,7 +369,7 @@ html[data-theme="light"] .hero-lede {
 
 .hero-visual {
   position: relative;
-  align-self: center;
+  align-self: start;
   height: auto;
   margin-bottom: 0;
   display: grid;
