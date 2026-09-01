@@ -354,17 +354,11 @@ html[data-theme="light"] .hero-lede {
 }
 
 .hero-visual > .example-data-note {
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  padding: 4px 0 6px;
-  background: #031027;
-  box-shadow: 0 -12px 20px #031027;
-}
-
-html[data-theme="light"] .hero-visual > .example-data-note {
-  background: #dceaff;
-  box-shadow: 0 -12px 20px #dceaff;
+  position: static;
+  margin-top: 8px;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .hero-copy .purchase-note {
@@ -375,12 +369,12 @@ html[data-theme="light"] .hero-visual > .example-data-note {
 
 .hero-visual {
   position: relative;
-  align-self: end;
-  height: 540px;
-  margin-bottom: -16px;
+  align-self: center;
+  height: auto;
+  margin-bottom: 0;
   display: grid;
   place-items: start center;
-  overflow: hidden;
+  overflow: visible;
   opacity: var(--hero-visual-opacity, 1);
   transform: translate3d(0, var(--hero-visual-shift, 0), 0);
 }
@@ -1146,9 +1140,9 @@ html[data-theme="light"] .landing-footer {
   }
 
   .hero-visual {
-    height: 270px;
-    margin-bottom: -30px;
-    overflow: hidden;
+    height: auto;
+    margin-bottom: 0;
+    overflow: visible;
   }
 
   .hero-visual img {
