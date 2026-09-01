@@ -356,7 +356,7 @@ html[data-theme="light"] .hero-lede {
 
 .hero-visual > .example-data-note {
   position: static;
-  margin-top: 8px;
+  margin-top: clamp(-90px, -6vw, -52px);
   padding: 0;
   background: transparent;
   box-shadow: none;
