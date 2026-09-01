@@ -255,7 +255,8 @@ html[data-theme="light"] .hero-section {
 
 .hero-copy {
   position: relative;
-  top: 96px;
+  top: 0;
+  align-self: center;
   z-index: 2;
   max-width: 740px;
   opacity: var(--hero-copy-opacity, 1);
