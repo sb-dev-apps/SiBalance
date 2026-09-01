@@ -354,14 +354,6 @@ html[data-theme="light"] .hero-lede {
   text-align: center;
 }
 
-.hero-visual > .example-data-note {
-  position: static;
-  margin-top: clamp(-90px, -6vw, -52px);
-  padding: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
 .hero-copy .purchase-note {
   margin: 28px 0 0;
   color: var(--home-soft);
