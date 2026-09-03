@@ -482,7 +482,8 @@ html[data-theme="light"] .trust-strip {
 
 .feature-section-compact .feature-visual {
   min-height: 0;
-  place-items: start center;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .feature-section-compact .feature-visual img {
