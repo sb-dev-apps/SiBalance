@@ -665,7 +665,12 @@ html[data-theme="light"] .feature-visual::before {
 }
 
 .screenshot-stack-images .feature-screen-back {
+  opacity: 1;
   transform: translate3d(30%, 4px, 0) scale(0.94);
+}
+
+html:not([data-theme="light"]) .screenshot-stack-images .feature-screen-back {
+  filter: brightness(1.14) saturate(1.05) drop-shadow(0 38px 54px rgba(0, 0, 0, 0.4));
 }
 
 .screenshot-stack-images .feature-screen-front {
@@ -718,7 +723,6 @@ html[data-theme="light"] .feature-visual::before {
 
 .feature-screen-back {
   z-index: 1;
-  opacity: 0.72;
 }
 
 .feature-screen-front {
