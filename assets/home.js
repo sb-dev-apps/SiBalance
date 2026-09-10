@@ -99,8 +99,6 @@
     return;
   }
 
-  var hint = stackButton.querySelector(".screenshot-stack-hint");
-
   stackButton.addEventListener("click", function () {
     var expanded = stackButton.getAttribute("aria-expanded") !== "true";
 
@@ -109,9 +107,5 @@
       "aria-label",
       expanded ? "Restack the Income and Expenses screenshots" : "Separate the Income and Expenses screenshots"
     );
-
-    if (hint) {
-      hint.textContent = expanded ? "Tap to restack" : "Tap to separate";
-    }
   });
 }());

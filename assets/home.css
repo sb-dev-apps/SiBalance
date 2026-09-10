@@ -635,11 +635,11 @@ html[data-theme="light"] .feature-visual::before {
 }
 
 .screenshot-stack-images {
-  width: 100%;
+  width: min(82%, 440px);
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
-  gap: 14px;
+  gap: 8px;
   place-items: center;
   position: relative;
   margin: 0;
@@ -664,37 +664,17 @@ html[data-theme="light"] .feature-visual::before {
 }
 
 .screenshot-stack-images .feature-screen-back {
-  transform: translate3d(34%, 4px, 0) scale(0.94);
+  transform: translate3d(30%, 4px, 0) scale(0.94);
 }
 
 .screenshot-stack-images .feature-screen-front {
-  transform: translate3d(-34%, -4px, 0) scale(0.96);
+  transform: translate3d(-30%, -4px, 0) scale(0.96);
 }
 
 .screenshot-stack-images[aria-expanded="true"] .feature-screen-back,
 .screenshot-stack-images[aria-expanded="true"] .feature-screen-front {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale(1);
-}
-
-.screenshot-stack-hint {
-  position: absolute;
-  bottom: 11%;
-  left: 50%;
-  z-index: 4;
-  border: 1px solid rgba(32, 217, 255, 0.48);
-  border-radius: 999px;
-  padding: 6px 11px;
-  color: var(--home-text);
-  background: rgba(8, 26, 58, 0.82);
-  box-shadow: 0 8px 24px rgba(3, 10, 29, 0.24);
-  backdrop-filter: blur(12px);
-  font-size: 12px;
-  font-weight: 750;
-  line-height: 1;
-  pointer-events: none;
-  transform: translateX(-50%);
-  white-space: nowrap;
 }
 
 .feature-visual-stack > .example-data-note,
@@ -1313,6 +1293,11 @@ html[data-theme="light"] .landing-footer {
 
   .feature-visual-stack img {
     width: 245px;
+  }
+
+  .screenshot-stack-images {
+    width: min(100%, 420px);
+    gap: 6px;
   }
 
   .device-section {
