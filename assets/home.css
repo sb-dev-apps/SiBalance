@@ -635,11 +635,11 @@ html[data-theme="light"] .feature-visual::before {
 }
 
 .screenshot-stack-images {
-  width: min(82%, 440px);
+  width: min(68%, 360px);
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   place-items: center;
   position: relative;
   margin: 0;
@@ -687,7 +687,7 @@ html[data-theme="light"] .feature-visual::before {
 }
 
 .screenshot-stack > .example-data-note {
-  margin-top: -77px;
+  margin-top: 8px;
 }
 
 .screenshot-ipad > .example-data-note {
@@ -1296,8 +1296,8 @@ html[data-theme="light"] .landing-footer {
   }
 
   .screenshot-stack-images {
-    width: min(100%, 420px);
-    gap: 6px;
+    width: min(100%, 340px);
+    gap: 4px;
   }
 
   .device-section {
@@ -1323,7 +1323,7 @@ html[data-theme="light"] .landing-footer {
   }
 
   .screenshot-stack > .example-data-note {
-    margin-top: -64px;
+    margin-top: 8px;
   }
 
   .screenshot-ipad > .example-data-note {
@@ -1446,12 +1446,12 @@ html[data-theme="light"] .landing-footer {
     padding-block: 44px;
   }
 
-  .feature-screen-back {
-    transform: translate3d(-30px, 2px, 0) scale(0.94);
+  .screenshot-stack-images .feature-screen-back {
+    transform: translate3d(30%, 2px, 0) scale(0.94);
   }
 
-  .feature-screen-front {
-    transform: translate3d(30px, -2px, 0) scale(0.96);
+  .screenshot-stack-images .feature-screen-front {
+    transform: translate3d(-30%, -2px, 0) scale(0.96);
   }
 
   .screenshot-phone > .example-data-note {
@@ -1459,7 +1459,7 @@ html[data-theme="light"] .landing-footer {
   }
 
   .screenshot-stack > .example-data-note {
-    margin-top: -59px;
+    margin-top: 8px;
   }
 
   .screenshot-ipad > .example-data-note {
