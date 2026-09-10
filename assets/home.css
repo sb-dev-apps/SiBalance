@@ -90,7 +90,7 @@ html[data-theme="light"] .home-page {
   top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--home-line);
-  background: rgba(7, 20, 47, 0.84);
+  background: rgba(6, 21, 47, 0.88);
   backdrop-filter: blur(22px) saturate(140%);
 }
 
@@ -162,7 +162,7 @@ html[data-theme="light"] .landing-header {
   min-height: 38px;
   border-color: var(--home-line);
   color: var(--home-text);
-  background: rgba(16, 41, 90, 0.58);
+  background: rgba(20, 56, 115, 0.7);
   backdrop-filter: none;
 }
 
@@ -470,6 +470,11 @@ html[data-theme="light"] .device-section {
   background: var(--home-bg-deep);
 }
 
+html:not([data-theme="light"]) .feature-section,
+html:not([data-theme="light"]) .device-section {
+  border-image: linear-gradient(90deg, transparent, rgba(57, 214, 244, 0.3), rgba(139, 92, 246, 0.22), transparent) 1;
+}
+
 .feature-section-tinted {
   background: var(--home-bg);
 }
@@ -739,14 +744,17 @@ html[data-theme="light"] .privacy-section {
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
   gap: 80px;
   align-items: center;
-  border: 1px solid rgba(48, 215, 243, 0.22);
+  border: 1px solid rgba(139, 92, 246, 0.42);
   border-radius: 8px;
   padding: 64px;
-  background: linear-gradient(145deg, rgba(16, 41, 90, 0.92), rgba(19, 47, 99, 0.82));
+  background:
+    radial-gradient(circle at 92% 8%, rgba(217, 79, 213, 0.1), transparent 32%),
+    linear-gradient(145deg, rgba(20, 56, 115, 0.95), rgba(25, 69, 129, 0.88));
   box-shadow: var(--dark-premium-glow);
 }
 
 html[data-theme="light"] .privacy-panel {
+  border-color: rgba(48, 215, 243, 0.22);
   background: rgba(255, 255, 255, 0.78);
   box-shadow: 0 34px 80px rgba(0, 0, 0, 0.3);
 }
@@ -818,7 +826,7 @@ html[data-theme="light"] .privacy-panel {
   border-radius: 12px;
   padding: 34px;
   color: var(--home-text);
-  background: rgba(16, 41, 90, 0.72);
+  background: rgba(20, 56, 115, 0.82);
   text-decoration: none;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
@@ -839,11 +847,11 @@ html[data-theme="light"] .plan-card:hover {
 }
 
 .plan-card-full {
-  border-color: rgba(139, 92, 246, 0.46);
+  border-color: rgba(139, 92, 246, 0.62);
   background:
-    radial-gradient(circle at 92% 0%, rgba(217, 79, 213, 0.1), transparent 34%),
-    radial-gradient(circle at 8% 100%, rgba(57, 214, 244, 0.08), transparent 36%),
-    rgba(19, 47, 99, 0.86);
+    radial-gradient(circle at 92% 0%, rgba(217, 79, 213, 0.16), transparent 34%),
+    radial-gradient(circle at 8% 100%, rgba(57, 214, 244, 0.12), transparent 36%),
+    rgba(25, 69, 129, 0.9);
   box-shadow: var(--dark-premium-glow);
 }
 
@@ -906,8 +914,9 @@ html[data-theme="light"] .plan-card-full {
   padding-block: 110px;
   text-align: center;
   background:
-    radial-gradient(circle at 50% 42%, rgba(57, 214, 244, 0.13), transparent 34%),
-    radial-gradient(circle at 82% 74%, rgba(139, 92, 246, 0.08), transparent 28%),
+    radial-gradient(circle at 50% 42%, rgba(57, 214, 244, 0.2), transparent 34%),
+    radial-gradient(circle at 82% 74%, rgba(139, 92, 246, 0.14), transparent 28%),
+    radial-gradient(circle at 12% 78%, rgba(217, 79, 213, 0.08), transparent 26%),
     linear-gradient(180deg, var(--dark-section-bg), var(--dark-page-bg));
 }
 
@@ -950,7 +959,7 @@ html[data-theme="light"] .final-cta {
 .landing-footer {
   border-top: 1px solid var(--home-line);
   padding-block: 34px;
-  background: #081936;
+  background: #082044;
 }
 
 html[data-theme="light"] .landing-footer {
@@ -1086,7 +1095,7 @@ html[data-theme="light"] .landing-footer {
     border: 1px solid var(--home-line);
     border-radius: 8px;
     padding: 18px;
-    background: rgba(11, 33, 72, 0.98);
+    background: rgba(13, 42, 89, 0.98);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
   }
 

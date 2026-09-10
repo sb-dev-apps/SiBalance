@@ -195,7 +195,7 @@ html[data-theme="light"] .content-media img {
   padding: 30px;
   background:
     radial-gradient(circle at 90% 10%, rgba(48, 215, 243, 0.14), transparent 34%),
-    rgba(16, 41, 90, 0.82);
+    rgba(20, 56, 115, 0.88);
   box-shadow: var(--dark-premium-glow);
 }
 
@@ -320,7 +320,7 @@ html[data-theme="light"] .guide-hero-card {
   border: 1px solid rgba(48, 215, 243, 0.24);
   border-radius: 8px;
   padding: 28px;
-  background: rgba(16, 41, 90, 0.78);
+  background: rgba(20, 56, 115, 0.84);
 }
 
 html[data-theme="light"] .content-callout {
@@ -357,7 +357,7 @@ html[data-theme="light"] .content-callout-caution {
   border: 1px solid var(--home-line);
   border-radius: 8px;
   padding: 22px;
-  background: rgba(16, 41, 90, 0.7);
+  background: rgba(20, 56, 115, 0.78);
 }
 
 html[data-theme="light"] .content-fact {
@@ -387,7 +387,7 @@ html[data-theme="light"] .content-fact {
   padding: 28px;
   background:
     radial-gradient(circle at 80% 18%, rgba(48, 215, 243, 0.12), transparent 32%),
-    rgba(16, 41, 90, 0.74);
+    rgba(20, 56, 115, 0.8);
   text-align: center;
 }
 
@@ -434,7 +434,7 @@ html[data-theme="light"] .content-media {
   min-width: 600px;
   border-collapse: collapse;
   color: var(--home-muted);
-  background: rgba(16, 41, 90, 0.7);
+  background: rgba(20, 56, 115, 0.78);
 }
 
 .content-table caption {
@@ -482,7 +482,7 @@ html[data-theme="light"] .content-table {
   border: 1px solid var(--home-line);
   border-radius: 8px;
   padding: 24px;
-  background: rgba(16, 41, 90, 0.74);
+  background: rgba(20, 56, 115, 0.82);
 }
 
 html[data-theme="light"] .content-side-card {
@@ -519,9 +519,9 @@ html[data-theme="light"] .content-side-card {
   border-radius: 9px;
   padding: 34px;
   background:
-    radial-gradient(circle at 90% 10%, rgba(57, 214, 244, 0.12), transparent 34%),
-    radial-gradient(circle at 4% 100%, rgba(139, 92, 246, 0.08), transparent 34%),
-    rgba(19, 47, 99, 0.84);
+    radial-gradient(circle at 90% 10%, rgba(57, 214, 244, 0.18), transparent 34%),
+    radial-gradient(circle at 4% 100%, rgba(139, 92, 246, 0.13), transparent 34%),
+    rgba(25, 69, 129, 0.9);
   box-shadow: var(--dark-premium-glow);
 }
 
