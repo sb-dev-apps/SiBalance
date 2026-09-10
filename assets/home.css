@@ -637,12 +637,64 @@ html[data-theme="light"] .feature-visual::before {
 .screenshot-stack-images {
   width: 100%;
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 14px;
   place-items: center;
+  position: relative;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  color: var(--home-text);
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .screenshot-stack-images img {
-  grid-area: 1 / 1;
-  width: min(78%, 310px);
+  width: min(100%, 270px);
+  transition: opacity 420ms ease, transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.screenshot-stack-images:focus-visible {
+  border-radius: 12px;
+  outline: 3px solid var(--home-cyan);
+  outline-offset: 8px;
+}
+
+.screenshot-stack-images .feature-screen-back {
+  transform: translate3d(34%, 4px, 0) scale(0.94);
+}
+
+.screenshot-stack-images .feature-screen-front {
+  transform: translate3d(-34%, -4px, 0) scale(0.96);
+}
+
+.screenshot-stack-images[aria-expanded="true"] .feature-screen-back,
+.screenshot-stack-images[aria-expanded="true"] .feature-screen-front {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.screenshot-stack-hint {
+  position: absolute;
+  bottom: 11%;
+  left: 50%;
+  z-index: 4;
+  border: 1px solid rgba(32, 217, 255, 0.48);
+  border-radius: 999px;
+  padding: 6px 11px;
+  color: var(--home-text);
+  background: rgba(8, 26, 58, 0.82);
+  box-shadow: 0 8px 24px rgba(3, 10, 29, 0.24);
+  backdrop-filter: blur(12px);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1;
+  pointer-events: none;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
 .feature-visual-stack > .example-data-note,
@@ -686,12 +738,16 @@ html[data-theme="light"] .feature-visual::before {
 .feature-screen-back {
   z-index: 1;
   opacity: 0.72;
-  transform: translate3d(-62px, 4px, 0) scale(0.94);
 }
 
 .feature-screen-front {
   z-index: 2;
-  transform: translate3d(64px, -4px, 0) scale(0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screenshot-stack-images img {
+    transition: none;
+  }
 }
 
 .device-section {
@@ -1257,14 +1313,6 @@ html[data-theme="light"] .landing-footer {
 
   .feature-visual-stack img {
     width: 245px;
-  }
-
-  .feature-screen-back {
-    transform: translate3d(-36px, 2px, 0) scale(0.94);
-  }
-
-  .feature-screen-front {
-    transform: translate3d(36px, -2px, 0) scale(0.96);
   }
 
   .device-section {

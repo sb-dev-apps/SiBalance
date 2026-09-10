@@ -91,3 +91,27 @@
   window.addEventListener("scroll", requestFadeUpdate, { passive: true });
   window.addEventListener("resize", requestFadeUpdate);
 }());
+
+(function () {
+  var stackButton = document.querySelector(".screenshot-stack-images");
+
+  if (!stackButton) {
+    return;
+  }
+
+  var hint = stackButton.querySelector(".screenshot-stack-hint");
+
+  stackButton.addEventListener("click", function () {
+    var expanded = stackButton.getAttribute("aria-expanded") !== "true";
+
+    stackButton.setAttribute("aria-expanded", expanded ? "true" : "false");
+    stackButton.setAttribute(
+      "aria-label",
+      expanded ? "Restack the Income and Expenses screenshots" : "Separate the Income and Expenses screenshots"
+    );
+
+    if (hint) {
+      hint.textContent = expanded ? "Tap to restack" : "Tap to separate";
+    }
+  });
+}());
