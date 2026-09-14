@@ -1,0 +1,5 @@
+﻿Date,Type,Description,Amount,Category,Recurring,Frequency,Recurring End Date,Payment Limit,Expense Treatment,Currency
+2026-09-12,Expense,Coffee,4.50,Coffee / Snacks,No,,,,Safe to Spend,
+2026-09-01,Income,Salary,2450.00,Salary,No,,,,,
+2026-09-05,Expense,Rent,950.00,Rent,Yes,Monthly,,12,Planned,
+2026-09-08,Expense,Energy,68.45,Electricity,No,,,,Planned,

@@ -830,6 +830,124 @@ html[data-theme="light"] .privacy-panel {
   box-shadow: 0 34px 80px rgba(0, 0, 0, 0.3);
 }
 
+.import-start-section {
+  padding-block: 100px;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(32, 217, 255, 0.16), transparent 30%),
+    radial-gradient(circle at 92% 82%, rgba(240, 68, 208, 0.14), transparent 32%),
+    var(--home-bg);
+}
+
+html[data-theme="light"] .import-start-section {
+  background:
+    radial-gradient(circle at 8% 18%, rgba(48, 215, 243, 0.14), transparent 30%),
+    radial-gradient(circle at 92% 82%, rgba(130, 71, 255, 0.1), transparent 32%),
+    #f8fbff;
+}
+
+.import-start-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(360px, 1.12fr);
+  gap: 64px;
+  align-items: center;
+  border: 1px solid rgba(48, 215, 243, 0.34);
+  border-radius: 12px;
+  padding: 58px;
+  background:
+    linear-gradient(135deg, rgba(18, 58, 122, 0.94), rgba(13, 42, 89, 0.92));
+  box-shadow: var(--dark-premium-glow);
+}
+
+html[data-theme="light"] .import-start-panel {
+  border-color: rgba(76, 131, 255, 0.2);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 28px 70px rgba(38, 72, 129, 0.16);
+}
+
+.import-start-intro h2 {
+  margin-bottom: 20px;
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.import-start-intro > p:not(.section-label) {
+  color: var(--home-muted);
+  font-size: 18px;
+}
+
+.import-start-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+  margin-top: 28px;
+}
+
+.import-start-actions .text-link {
+  margin-top: 0;
+}
+
+.import-steps {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: import-step;
+}
+
+.import-steps li {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  border: 1px solid var(--home-line);
+  border-radius: 10px;
+  padding: 20px;
+  background: rgba(7, 27, 61, 0.38);
+}
+
+html[data-theme="light"] .import-steps li {
+  background: rgba(235, 243, 255, 0.72);
+}
+
+.import-step-number {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #031027;
+  background: linear-gradient(135deg, var(--home-cyan), #7b8cff);
+  font-size: 18px;
+  font-weight: 850;
+}
+
+.import-steps div {
+  display: grid;
+  gap: 5px;
+}
+
+.import-steps strong {
+  color: var(--home-text);
+  font-size: 18px;
+}
+
+.import-steps div span {
+  color: var(--home-muted);
+  line-height: 1.55;
+}
+
+.import-full-note {
+  grid-column: 1 / -1;
+  margin: -22px 0 0;
+  color: var(--home-soft);
+  font-size: 14px;
+  text-align: center;
+}
+
 .privacy-panel > div > p:not(.section-label) {
   color: var(--home-muted);
   font-size: 19px;
@@ -1121,6 +1239,7 @@ html[data-theme="light"] .landing-footer {
   .features-intro h2,
   .device-copy h2,
   .privacy-panel h2,
+  .import-start-intro h2,
   .purchase-panel h2,
   .final-cta h2 {
     font-size: 40px;
@@ -1273,6 +1392,7 @@ html[data-theme="light"] .landing-footer {
   .features-intro h2,
   .device-copy h2,
   .privacy-panel h2,
+  .import-start-intro h2,
   .purchase-panel h2,
   .final-cta h2 {
     font-size: 36px;
@@ -1345,12 +1465,14 @@ html[data-theme="light"] .landing-footer {
   }
 
   .privacy-section,
+  .import-start-section,
   .purchase-section,
   .final-cta {
     padding-block: 80px;
   }
 
   .privacy-panel,
+  .import-start-panel,
   .purchase-panel {
     grid-template-columns: 1fr;
     gap: 42px;
@@ -1362,6 +1484,15 @@ html[data-theme="light"] .landing-footer {
 
   .privacy-panel {
     padding: 34px;
+  }
+
+  .import-start-panel {
+    grid-template-columns: 1fr;
+    padding: 38px;
+  }
+
+  .import-full-note {
+    margin-top: -6px;
   }
 
   .footer-layout {
@@ -1426,6 +1557,7 @@ html[data-theme="light"] .landing-footer {
   .features-intro h2,
   .device-copy h2,
   .privacy-panel h2,
+  .import-start-intro h2,
   .purchase-panel h2,
   .final-cta h2 {
     font-size: 32px;
@@ -1492,6 +1624,33 @@ html[data-theme="light"] .landing-footer {
 
   .privacy-panel {
     padding: 26px;
+  }
+
+  .import-start-panel {
+    padding: 26px;
+  }
+
+  .import-start-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .import-start-actions .button,
+  .import-start-actions .text-link {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .import-steps li {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 13px;
+    padding: 17px;
+  }
+
+  .import-step-number {
+    width: 40px;
+    height: 40px;
   }
 
 }

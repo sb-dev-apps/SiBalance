@@ -6,14 +6,14 @@
   <title>SiBalance User Guide - iPhone &amp; iPad Budgeting Help</title>
   <link rel="canonical" href="https://sibalance.app/user-guide.html">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <meta name="description" content="Learn how to use SiBalance on iPhone and iPad, including budgets, income and expense calendars, Goals, Safe to Spend, forecasts, widgets, Siri and backups.">
+  <meta name="description" content="Learn how to use SiBalance on iPhone and iPad, including screenshot and CSV imports, budgets, Goals, Safe to Spend, forecasts, widgets, Siri and backups.">
   <meta name="theme-color" content="#081a3a">
   <meta name="apple-itunes-app" content="app-id=6776341469">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SiBalance">
   <meta property="og:locale" content="en_GB">
   <meta property="og:title" content="SiBalance User Guide - iPhone &amp; iPad Budgeting Help">
-  <meta property="og:description" content="Learn how to use budgets, income and expense calendars, Goals, Safe to Spend, forecasts, widgets, Siri, sync and backups in SiBalance.">
+  <meta property="og:description" content="Learn how to import transactions and use budgets, Goals, Safe to Spend, forecasts, widgets, Siri, sync and backups in SiBalance.">
   <meta property="og:url" content="https://sibalance.app/user-guide.html">
   <meta property="og:image" content="https://sibalance.app/assets/social-preview.png">
   <meta property="og:image:alt" content="SiBalance private budgeting dashboard displayed on an iPhone">
@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SiBalanceApp">
   <meta name="twitter:title" content="SiBalance User Guide - iPhone &amp; iPad Budgeting Help">
-  <meta name="twitter:description" content="Learn how to use budgets, income and expense calendars, Goals, Safe to Spend, forecasts, widgets, Siri, sync and backups in SiBalance.">
+  <meta name="twitter:description" content="Learn how to import transactions and use budgets, Goals, Safe to Spend, forecasts, widgets, Siri, sync and backups in SiBalance.">
   <meta name="twitter:image" content="https://sibalance.app/assets/social-preview.png">
   <meta name="twitter:image:alt" content="SiBalance private budgeting dashboard displayed on an iPhone">
   <script type="application/ld+json">
@@ -33,8 +33,8 @@
     "@id": "https://sibalance.app/user-guide.html#webpage",
     "url": "https://sibalance.app/user-guide.html",
     "name": "SiBalance User Guide - iPhone & iPad Budgeting Help",
-    "description": "Learn how to use SiBalance on iPhone and iPad, including budgets, income and expense calendars, Goals, Safe to Spend, forecasts, widgets, Siri and backups.",
-    "dateModified": "2026-09-06",
+    "description": "Learn how to use SiBalance on iPhone and iPad, including screenshot and CSV imports, budgets, Goals, Safe to Spend, forecasts, widgets, Siri and backups.",
+    "dateModified": "2026-09-13",
     "isPartOf": {
       "@id": "https://sibalance.app/#website"
     },
@@ -72,6 +72,21 @@
       color: #333;
     }
 
+    pre {
+      max-width: 100%;
+      overflow-x: auto;
+      border: 1px solid #d9d9de;
+      border-radius: 8px;
+      padding: 14px 16px;
+      background: #f5f5f7;
+    }
+
+    html:not([data-theme="light"]) pre {
+      border-color: rgba(255, 255, 255, 0.16);
+      color: #f5f7ff;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
     .date {
       color: #666;
       margin-bottom: 30px;
@@ -103,9 +118,9 @@
       text-decoration: underline;
     }
   </style>
-  <script src="assets/theme.js?v=5"></script>
+  <script src="assets/theme.js?v=6"></script>
   <link rel="stylesheet" href="assets/site.css?v=14">
-  <link rel="stylesheet" href="assets/home.css?v=57">
+  <link rel="stylesheet" href="assets/home.css?v=58">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -113,7 +128,7 @@
   <header class="landing-header">
     <div class="nav-shell">
       <a class="brand" href="/" aria-label="SiBalance home">
-      <img class="app-mark" src="assets/sibalance-logo-96.webp" alt="" width="42" height="42">
+      <img class="app-mark" src="assets/sibalance-logo-dark-96.png?v=20260914" alt="" width="42" height="42">
         <span>SiBalance</span>
       </a>
 
@@ -144,12 +159,12 @@
   <div class="page">
     <main class="document" id="main-content">
   <h1>SiBalance User Guide</h1>
-  <p class="date">Last updated: 6 September 2026</p>
-  <p class="date">Covers SiBalance 2.0.0 and later.</p>
+  <p class="date">Last updated: 13 September 2026</p>
+  <p class="date">Covers SiBalance 5.0.0 and later.</p>
 
   <p>
     Welcome to SiBalance. This guide explains how to set up your budget,
-    manage income and expenses, use Goals, understand Safe To Spend,
+    manage income and expenses, import transactions, use Goals, understand Safe To Spend,
     use insights, generate reports, and manage privacy and backup settings.
   </p>
   <p>
@@ -161,10 +176,12 @@
     <h2 id="contents-heading">Contents</h2>
     <ul>
       <li><a href="#free-and-full">SiBalance Free and SiBalance Full</a></li>
+      <li><a href="#whats-new">What’s New in SiBalance 5.0</a></li>
       <li><a href="#getting-started">Getting Started</a></li>
       <li><a href="#iphone-and-ipad">Using SiBalance on iPhone and iPad</a></li>
       <li><a href="#income">Income</a></li>
       <li><a href="#expenses">Expenses</a></li>
+      <li><a href="#import-from-screenshot">Import from Screenshot</a></li>
       <li><a href="#goals">Goals</a></li>
       <li><a href="#deduct-from-safe-to-spend">Deduct from Safe to Spend</a></li>
       <li><a href="#searching-editing-and-deleting-entries">Searching, Editing and Deleting Entries</a></li>
@@ -175,6 +192,7 @@
       <li><a href="#reports">Reports</a></li>
       <li><a href="#siri-and-app-shortcuts">Siri and App Shortcuts</a></li>
       <li><a href="#settings">Settings</a></li>
+      <li><a href="#csv-import-and-export">CSV Import and Export</a></li>
       <li><a href="#backup-and-restore">Backup and Restore</a></li>
       <li><a href="#need-help">Need Help?</a></li>
     </ul>
@@ -194,14 +212,25 @@
   <p>
     A one-time lifetime purchase of <strong>SiBalance Full</strong> adds unlimited
     budgets, Goals, forecasting, Insights and trends, Home Screen and Lock Screen
-    widgets, optional iCloud Sync, and encrypted backups. There is no subscription
-    or recurring charge.
+    widgets, Import from Screenshot, CSV import, optional iCloud Sync, and encrypted
+    backups. There is no subscription or recurring charge.
   </p>
 
   <p>
     Features that require SiBalance Full are identified in the app. Existing
     customers can use <strong>Restore Purchase</strong> to verify and restore access.
   </p>
+
+  <h2 id="whats-new">What’s New in SiBalance 5.0</h2>
+  <ul>
+    <li>Import transactions from screenshots with private, on-device text recognition.</li>
+    <li>Review and edit every detected transaction before adding it.</li>
+    <li>Import and export CSV files, with downloadable templates and category guidance.</li>
+    <li>See possible duplicate warnings during screenshot and CSV review.</li>
+    <li>Choose categories, dates, amounts, recurrence, and expense treatment while reviewing imports.</li>
+    <li>Use refreshed light and dark SiBalance app icons.</li>
+    <li>Benefit from improved sorting, import reliability, accessibility, localisation, and purchase validation.</li>
+  </ul>
 
   <hr>
 
@@ -450,6 +479,63 @@
     calendars, and related transaction displays. Custom names such as Amazon,
     Lunch, Coffee, Tesco, and Gas &amp; Electric receive stable colours rather
     than a generic grey.
+  </p>
+
+  <h2 id="import-from-screenshot">Import from Screenshot</h2>
+  <p>
+    Import from Screenshot is a SiBalance Full feature. It uses private, on-device
+    text recognition to turn a screenshot into one or more draft income or expense
+    entries. Nothing is added until you review and confirm it.
+  </p>
+  <ol>
+    <li>Open <strong>Income</strong> or <strong>Expenses</strong>.</li>
+    <li>Tap the <strong>+</strong> button.</li>
+    <li>Select <strong>Import from Screenshot</strong>.</li>
+    <li>Choose a screenshot from the system photo picker.</li>
+    <li>Wait while SiBalance reads it on your device.</li>
+    <li>Review and correct the detected transaction information.</li>
+    <li>Tap <strong>Import Selected</strong>, <strong>Add Income</strong>, or <strong>Add Expense</strong>.</li>
+  </ol>
+  <p>
+    The entry type is determined by where you start: importing from Income creates
+    income drafts, while importing from Expenses creates expense drafts.
+  </p>
+
+  <h3>Reviewing Detected Transactions</h3>
+  <p>
+    When one transaction is detected, SiBalance opens the normal entry screen with
+    the recognised information filled in. Check or change its category, amount,
+    description or merchant, date, and repeat settings. Expenses also let you choose
+    <strong>Safe to Spend</strong> or <strong>Planned</strong>.
+  </p>
+  <p>
+    When several transactions are detected, a review list lets you include or
+    exclude each transaction and edit its details. You can select categories with
+    the normal category browser, configure repeat intervals, and use either an end
+    date or a number of payments. Repeating expenses are automatically treated as
+    Planned, matching manual expense entry.
+  </p>
+
+  <h3>Possible Duplicates</h3>
+  <p>
+    SiBalance highlights a <strong>Possible duplicate</strong> when an existing entry
+    has a closely matching type, amount, date, and description. It never deletes or
+    merges possible duplicates automatically; you decide whether to include them.
+  </p>
+
+  <h3>Privacy and Unfinished Reviews</h3>
+  <ul>
+    <li>Recognition happens entirely on your device.</li>
+    <li>Screenshots and recognised text are not uploaded.</li>
+    <li>No bank connection, external AI service, or analytics service is used.</li>
+    <li>The screenshot is not retained after the import.</li>
+  </ul>
+  <p>
+    After recognition creates a review draft, the review cannot be accidentally
+    swiped away. Briefly backgrounding the app preserves the in-memory review, and
+    Cancel offers <strong>Keep Reviewing</strong> or <strong>Discard Import</strong>.
+    If iOS terminates SiBalance completely, an unfinished screenshot review is not
+    retained so that OCR data is not stored unnecessarily.
   </p>
 
   <hr>
@@ -999,6 +1085,72 @@
     that notifications are allowed for SiBalance in iOS Settings.
   </p>
 
+  <h3 id="csv-import-and-export">Import &amp; Export</h3>
+  <p>
+    Settings includes <strong>Import CSV</strong>, <strong>Export CSV</strong>, and
+    <strong>Download CSV Template</strong>. CSV import requires SiBalance Full;
+    export and template downloads are available without Full.
+  </p>
+
+  <h4>Import CSV</h4>
+  <ol>
+    <li>Open <strong>Settings</strong> and find <strong>Import &amp; Export</strong>.</li>
+    <li>Tap <strong>Import CSV</strong> and choose a CSV file.</li>
+    <li>Select the destination budget.</li>
+    <li>Review the rows and correct invalid information or missing categories.</li>
+    <li>Include or exclude individual rows.</li>
+    <li>Import the valid selected transactions.</li>
+  </ol>
+  <p>
+    Choosing a file never imports it immediately. The review shows the date, type,
+    description, amount, category, validation warnings, and possible duplicate
+    warnings. Valid selected rows can still be imported when other rows contain errors.
+  </p>
+
+  <h4>CSV Format</h4>
+  <p>The public column order is:</p>
+  <pre><code>Date,Type,Description,Amount,Category,Recurring,Frequency,Recurring End Date,Payment Limit,Expense Treatment,Currency</code></pre>
+  <p>
+    Date, Type, Description, and Amount are required. The remaining columns are
+    optional. Follow these rules:
+  </p>
+  <ul>
+    <li>Dates use <strong>yyyy-MM-dd</strong>.</li>
+    <li>Type is <strong>Income</strong> or <strong>Expense</strong>.</li>
+    <li>Amounts are positive decimals without currency symbols or thousands separators.</li>
+    <li>Recurring is <strong>Yes</strong> or <strong>No</strong>; Frequency is required for repeating entries.</li>
+    <li>Standard frequencies are Daily, Weekly, Fortnightly, Every 4 Weeks, Monthly, Quarterly, and Yearly.</li>
+    <li>A repeating transaction can use a Recurring End Date or Payment Limit, but not both.</li>
+    <li>Expense Treatment is <strong>Safe to Spend</strong> or <strong>Planned</strong>, and remains blank for income.</li>
+    <li>Currency is an optional three-letter ISO code such as GBP, USD, or EUR. If present, it must match the destination budget because SiBalance does not convert currencies.</li>
+  </ul>
+  <p>
+    Copy an exact category from the category-reference file, or leave Category blank
+    and choose one during review. Unknown categories are flagged and are not created
+    automatically.
+  </p>
+  <p>
+    The importer supports UTF-8, an optional UTF-8 byte-order mark, Windows and Unix
+    line endings, quoted commas, escaped quotation marks, Unicode text, and properly
+    quoted line breaks.
+  </p>
+
+  <h4>Export CSV</h4>
+  <p>
+    Export CSV uses the same public schema, so an export can be reviewed and imported
+    again. It includes stored income and expense transactions, but not internal IDs,
+    sync metadata, deleted records, generated carry-over entries, or internal
+    recurrence-series identifiers.
+  </p>
+
+  <h4>Download the CSV Starter Pack</h4>
+  <p>
+    Download the <a href="downloads/csv-starter-pack/SiBalance-CSV-Starter-Pack.zip">complete starter pack</a>,
+    or get the <a href="downloads/csv-starter-pack/SiBalance-CSV-Template.csv">CSV template</a>,
+    <a href="downloads/csv-starter-pack/SiBalance-Category-Reference.csv">category reference</a>, and
+    <a href="downloads/csv-starter-pack/SiBalance-CSV-Guide.txt">plain-text CSV guide</a> separately.
+  </p>
+
   <h3 id="backup-and-restore">Security &amp; Storage</h3>
   <p>
     The <a href="private-budgeting.html">Private Budgeting</a> page explains how
@@ -1205,7 +1357,7 @@
   <footer class="landing-footer">
     <div class="landing-shell footer-layout">
       <a class="brand" href="/" aria-label="SiBalance home">
-      <img class="app-mark" src="assets/sibalance-logo-96.webp" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <img class="app-mark" src="assets/sibalance-logo-dark-96.png?v=20260914" alt="" width="36" height="36" loading="lazy" decoding="async">
         <span>SiBalance</span>
       </a>
       <div class="footer-links">

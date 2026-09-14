@@ -20,15 +20,16 @@
 
   function applyTheme(theme) {
     var nextTheme = theme === "light" ? "light" : "dark";
-    var iconPath = "/assets/sibalance-logo-" + nextTheme + "-96.png";
+    var markPath = "/assets/sibalance-logo-" + nextTheme + "-96.png?v=20260914";
+    var faviconPath = "/assets/sibalance-logo-" + nextTheme + "-64.png?v=20260914";
     root.dataset.theme = nextTheme;
 
     Array.prototype.slice.call(document.querySelectorAll(".app-mark")).forEach(function (image) {
-      image.setAttribute("src", iconPath);
+      image.setAttribute("src", markPath);
     });
 
     Array.prototype.slice.call(document.querySelectorAll('link[rel~="icon"]')).forEach(function (link) {
-      link.setAttribute("href", iconPath);
+      link.setAttribute("href", faviconPath);
     });
 
     Array.prototype.slice.call(document.querySelectorAll(".theme-toggle")).forEach(function (button) {

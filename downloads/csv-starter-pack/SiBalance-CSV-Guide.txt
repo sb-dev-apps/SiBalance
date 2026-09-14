@@ -1,0 +1,32 @@
+SiBalance CSV Import Guide
+==========================
+
+Use SiBalance-CSV-Template.csv as your starting point. You can edit it in Excel, Apple Numbers, Google Sheets, or another spreadsheet app, then save or download it as a CSV file.
+
+Required columns
+----------------
+Date, Type, Description, Amount
+
+Optional columns
+----------------
+Category, Recurring, Frequency, Recurring End Date, Payment Limit, Expense Treatment, Currency
+
+Accepted values
+---------------
+Date: yyyy-MM-dd, for example 2026-09-12.
+Type: Income or Expense.
+Description: Any useful transaction name.
+Amount: A positive decimal without a currency symbol or thousands separator, for example 12, 12.50, or 1234.56.
+Category: Use an exact SiBalance category name from SiBalance-Category-Reference.csv, or an exact custom category already created in the destination budget. You can also leave this blank and choose a category on the review screen.
+Recurring: Yes or No. A blank value is treated as No.
+Frequency: Required only when Recurring is Yes. Accepted values are Daily, Weekly, Fortnightly, Every 4 Weeks, Monthly, Quarterly, or Yearly.
+Recurring End Date: Optional yyyy-MM-dd date. Do not use this together with Payment Limit.
+Payment Limit: Optional whole number from 1 to 999. Do not use this together with Recurring End Date.
+Expense Treatment: For expenses, use Safe to Spend or Planned. Leave blank for income. Recurring expenses must use Planned.
+Currency: Optional three-letter ISO code such as GBP, USD, or EUR. If present, it must match the destination budget. SiBalance does not convert currencies. Leave it blank to use the destination budget currency.
+
+Important
+---------
+Keep the header names unchanged. Do not add currency symbols or thousands separators to Amount. Spreadsheet apps automatically handle commas, quotation marks, line breaks, Unicode, and non-English text when the file is saved as a proper UTF-8 CSV.
+
+Nothing is imported immediately. SiBalance shows a review screen first, where you can correct fields, choose categories, exclude rows, and decide whether to include possible duplicates. Invalid rows are not imported until corrected.
