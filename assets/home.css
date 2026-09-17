@@ -606,7 +606,7 @@ html:not([data-theme="light"]) .purchase-section .section-label {
 }
 
 html:not([data-theme="light"]) .privacy-section .section-label,
-html:not([data-theme="light"]) .plan-card-full .plan-name {
+html:not([data-theme="light"]) .plan-card-featured .plan-name {
   color: #ff74e4;
 }
 
@@ -940,7 +940,7 @@ html[data-theme="light"] .import-steps li {
   line-height: 1.55;
 }
 
-.import-full-note {
+.import-included-note {
   grid-column: 1 / -1;
   margin: -22px 0 0;
   color: var(--home-soft);
@@ -1005,7 +1005,7 @@ html[data-theme="light"] .import-steps li {
 
 .plan-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 24px;
 }
 
@@ -1035,7 +1035,7 @@ html[data-theme="light"] .plan-card:hover {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
 }
 
-.plan-card-full {
+.plan-card-featured {
   border-color: rgba(130, 71, 255, 0.78);
   background:
     radial-gradient(circle at 92% 0%, rgba(240, 68, 208, 0.24), transparent 36%),
@@ -1044,7 +1044,7 @@ html[data-theme="light"] .plan-card:hover {
   box-shadow: var(--dark-premium-glow);
 }
 
-html[data-theme="light"] .plan-card-full {
+html[data-theme="light"] .plan-card-featured {
   border-color: rgba(48, 215, 243, 0.48);
   background:
     radial-gradient(circle at 90% 0%, rgba(48, 215, 243, 0.18), transparent 38%),
@@ -1066,6 +1066,8 @@ html[data-theme="light"] .plan-card-full {
 
 .plan-card ul {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
   gap: 11px;
   margin: 0;
   padding: 0;
@@ -1086,7 +1088,7 @@ html[data-theme="light"] .plan-card-full {
   content: "✓";
 }
 
-.plan-card .lifetime-update-note {
+.plan-card .purchase-summary-note {
   margin: 40px 0 0;
   color: var(--home-text) !important;
   font-weight: 750;
@@ -1482,6 +1484,10 @@ html[data-theme="light"] .landing-footer {
     grid-template-columns: 1fr;
   }
 
+  .plan-card ul {
+    grid-template-columns: 1fr;
+  }
+
   .privacy-panel {
     padding: 34px;
   }
@@ -1491,7 +1497,7 @@ html[data-theme="light"] .landing-footer {
     padding: 38px;
   }
 
-  .import-full-note {
+  .import-included-note {
     margin-top: -6px;
   }
 
