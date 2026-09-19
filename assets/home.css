@@ -158,7 +158,7 @@ html[data-theme="light"] .landing-header {
 }
 
 .landing-header .theme-toggle {
-  position: static;
+  position: relative;
   min-height: 38px;
   border-color: var(--home-line);
   color: var(--home-text);
