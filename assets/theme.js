@@ -35,6 +35,8 @@
     Array.prototype.slice.call(document.querySelectorAll(".theme-toggle")).forEach(function (button) {
       var label = nextTheme === "light" ? "Dark" : "Light";
       button.setAttribute("aria-pressed", nextTheme === "light" ? "true" : "false");
+      button.setAttribute("aria-label", "Switch to " + label.toLowerCase() + " theme");
+      button.setAttribute("title", "Switch to " + label.toLowerCase() + " theme");
 
       var text = button.querySelector(".theme-toggle-text");
       if (text) {
