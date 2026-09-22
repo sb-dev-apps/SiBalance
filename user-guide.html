@@ -34,7 +34,7 @@
     "url": "https://sibalance.app/user-guide.html",
     "name": "SiBalance User Guide - iPhone & iPad Budgeting Help",
     "description": "Learn how to use SiBalance on iPhone and iPad, including screenshot and CSV imports, budgets, Goals, Safe to Spend, forecasts, widgets, Siri and backups.",
-    "dateModified": "2026-09-14",
+    "dateModified": "2026-09-22",
     "isPartOf": {
       "@id": "https://sibalance.app/#website"
     },
@@ -159,7 +159,7 @@
   <div class="page">
     <main class="document" id="main-content">
   <h1>SiBalance User Guide</h1>
-  <p class="date">Last updated: 17 September 2026</p>
+  <p class="date">Last updated: 22 September 2026</p>
   <p class="date">Covers SiBalance 5.0.0 and later.</p>
 
   <p>
@@ -191,6 +191,7 @@
       <li><a href="#insights">Insights</a></li>
       <li><a href="#reports">Reports</a></li>
       <li><a href="#siri-and-app-shortcuts">Siri and App Shortcuts</a></li>
+      <li><a href="#automatic-card-tap-expenses">Automatically Add Apple Pay Purchases</a></li>
       <li><a href="#settings">Settings</a></li>
       <li><a href="#csv-import-and-export">CSV Import/Export</a></li>
       <li><a href="#backup-and-restore">Backup and Restore</a></li>
@@ -935,6 +936,34 @@
     <li>“Open dashboard in SiBalance”</li>
     <li>“Show my budget in SiBalance”</li>
   </ul>
+
+  <hr>
+
+  <h2 id="automatic-card-tap-expenses">Automatically Add Apple Pay Purchases to SiBalance</h2>
+  <p>
+    Set up one Shortcuts automation to add eligible card-tap purchases as ordinary
+    SiBalance expenses.
+  </p>
+  <ol>
+    <li>Install SiBalance, open it, and create the budget you want to use.</li>
+    <li>Open <strong>Shortcuts → Automation → +</strong> and choose <strong>Transaction</strong>.</li>
+    <li>In <strong>When I Tap</strong>, tap the card name and choose <strong>Any Card</strong>. This lets one automation cover eligible taps with your cards.</li>
+    <li>Leave <strong>Categories</strong> and <strong>Merchants</strong> set to <strong>Any</strong>, then turn <strong>Automation</strong> on.</li>
+    <li>Search for and add <strong>Add Wallet Expense to SiBalance</strong>.</li>
+    <li>Tap <strong>Amount → Select Variable → Transaction</strong>. Tap the inserted Transaction variable and choose <strong>Amount</strong>.</li>
+    <li>Tap <strong>Budget</strong> and choose your SiBalance budget.</li>
+    <li>Expand the SiBalance action using its small down arrow. Set <strong>Description</strong> to <strong>Transaction → Merchant</strong> and <strong>Category</strong> to <strong>Purchases</strong>. Leave <strong>Date</strong> blank to use the current date, and leave <strong>Note</strong> blank unless you want a fixed note.</li>
+    <li>Leave <strong>Show When Run</strong> off for an unattended run. <strong>Notify</strong> is optional. Save the automation.</li>
+  </ol>
+  <p>
+    After the next eligible card tap, check that SiBalance has added
+    <strong>one Purchases expense</strong> with the correct amount and merchant,
+    and that Safe to Spend has decreased.
+  </p>
+  <p>
+    This automation responds to eligible card taps; it does not import past Wallet
+    transactions or connect SiBalance to a bank.
+  </p>
 
   <hr>
 
