@@ -34,7 +34,7 @@
     "url": "https://sibalance.app/user-guide.html",
     "name": "SiBalance User Guide - iPhone & iPad Budgeting Help",
     "description": "Learn how to use SiBalance on iPhone and iPad, including screenshot and CSV imports, budgets, Goals, Safe to Spend, forecasts, widgets, Siri and backups.",
-    "dateModified": "2026-09-22",
+    "dateModified": "2026-09-23",
     "isPartOf": {
       "@id": "https://sibalance.app/#website"
     },
@@ -70,6 +70,19 @@
     h4 {
       margin-top: 20px;
       color: #333;
+    }
+
+    .wallet-setup summary {
+      margin-top: 24px;
+      color: var(--home-text);
+      font-size: 1.2em;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .wallet-setup summary:focus-visible {
+      outline: 2px solid var(--home-cyan);
+      outline-offset: 4px;
     }
 
     pre {
@@ -159,7 +172,7 @@
   <div class="page">
     <main class="document" id="main-content">
   <h1>SiBalance User Guide</h1>
-  <p class="date">Last updated: 22 September 2026</p>
+  <p class="date">Last updated: 23 September 2026</p>
   <p class="date">Covers SiBalance 5.0.0 and later.</p>
 
   <p>
@@ -942,29 +955,82 @@
   <span id="automatic-card-tap-expenses" aria-hidden="true"></span>
   <h2 id="automatically-add-apple-pay-purchases-to-sibalance">Automatically Add Apple Pay Purchases to SiBalance</h2>
   <p>
-    Set up one Shortcuts automation to add eligible card-tap purchases as ordinary
-    SiBalance expenses.
+    Set up a Shortcuts automation to add eligible Apple Pay purchases as ordinary
+    SiBalance expenses. Choose the instructions for your iOS version.
   </p>
-  <ol>
-    <li>Install SiBalance, open it, and create the budget you want to use.</li>
-    <li>Open <strong>Shortcuts → Automation → +</strong> and choose <strong>Transaction</strong>.</li>
-    <li>In <strong>When I Tap</strong>, tap the card name and choose <strong>Any Card</strong>. This lets one automation cover eligible taps with your cards.</li>
-    <li>Leave <strong>Categories</strong> and <strong>Merchants</strong> set to <strong>Any</strong>, then turn <strong>Automation</strong> on.</li>
-    <li>Search for and add <strong>Add Wallet Expense to SiBalance</strong>.</li>
-    <li>Tap <strong>Amount → Select Variable → Transaction</strong>. Tap the inserted Transaction variable and choose <strong>Amount</strong>.</li>
-    <li>Tap <strong>Budget</strong> and choose your SiBalance budget.</li>
-    <li>Expand the SiBalance action using its small down arrow. Set <strong>Description</strong> to <strong>Transaction → Merchant</strong> and <strong>Category</strong> to <strong>Purchases</strong>. Leave <strong>Date</strong> blank to use the current date, and leave <strong>Note</strong> blank unless you want a fixed note.</li>
-    <li>Leave <strong>Show When Run</strong> off for an unattended run. <strong>Notify</strong> is optional. Save the automation.</li>
-  </ol>
+
+  <details class="wallet-setup" open>
+    <summary>iOS 27</summary>
+    <ol>
+      <li>Open <strong>Shortcuts</strong> and create a new shortcut.</li>
+      <li>Tap <strong>Edit</strong>, then choose <strong>Automation</strong>.</li>
+      <li>Select <strong>Wallet</strong>.</li>
+      <li>Set the trigger to <strong>Any Card</strong>.</li>
+      <li>Leave <strong>Categories</strong> set to <strong>Any Category</strong>.</li>
+      <li>Leave <strong>Merchants</strong> set to <strong>Any Merchant</strong>.</li>
+      <li>Turn <strong>Automation</strong> on.</li>
+      <li>Turn <strong>Notify</strong> off if you do not want a Shortcuts notification each time it runs.</li>
+      <li>Search for <strong>SiBalance</strong>.</li>
+      <li>Add <strong>Add Wallet Expense to SiBalance</strong>.</li>
+      <li>Tap <strong>Amount</strong>.</li>
+      <li>Choose <strong>Select Variable</strong>.</li>
+      <li>Select <strong>Transaction</strong>.</li>
+      <li>Tap the inserted <strong>Transaction</strong> variable and choose <strong>Amount</strong>.</li>
+      <li>Tap <strong>Budget</strong> and choose the SiBalance budget to use.</li>
+      <li>Expand the SiBalance action using the small arrow.</li>
+      <li>Tap <strong>Description</strong> and choose <strong>Select Variable → Transaction</strong>.</li>
+      <li>Tap the inserted <strong>Transaction</strong> variable and choose <strong>Merchant</strong>.</li>
+      <li>Tap <strong>Category</strong> and choose the SiBalance category to use, for example <strong>Purchases</strong>.</li>
+      <li>Leave <strong>Date</strong> blank so SiBalance uses the current date.</li>
+      <li>Leave <strong>Note</strong> blank unless you want the same fixed note added to every imported purchase.</li>
+      <li>Turn <strong>Show When Run</strong> off so the expense can be added without opening SiBalance.</li>
+      <li>Save the shortcut.</li>
+    </ol>
+    <p><strong>Amount and merchant are supplied by the Wallet transaction. Your budget and SiBalance category are chosen during setup.</strong></p>
+  </details>
+
+  <details class="wallet-setup">
+    <summary>iOS 18 / iOS 26</summary>
+    <ol>
+      <li>Install SiBalance, open it, and create the budget you want to use.</li>
+      <li>Open <strong>Shortcuts → Automation → +</strong> and choose <strong>Transaction</strong>.</li>
+      <li>Under <strong>When I Tap</strong>, choose <strong>Any Card</strong> if available. If your version asks for cards individually, select the cards you want the automation to use.</li>
+      <li>Leave <strong>Categories</strong> and <strong>Merchants</strong> unrestricted.</li>
+      <li>Choose the option that allows the automation to run automatically without confirmation. Depending on the iOS version, this may appear as <strong>Run Immediately</strong> or an <strong>Automation</strong> toggle.</li>
+      <li>Turn transaction notifications off if you do not want Shortcuts to notify you whenever it runs.</li>
+      <li>Add the SiBalance action <strong>Add Wallet Expense to SiBalance</strong>.</li>
+      <li>Tap <strong>Amount → Select Variable → Transaction</strong>.</li>
+      <li>Tap the inserted <strong>Transaction</strong> variable and choose <strong>Amount</strong>.</li>
+      <li>Tap <strong>Budget</strong> and choose the SiBalance budget to use.</li>
+      <li>Expand the SiBalance action.</li>
+      <li>Set <strong>Description</strong> to <strong>Transaction → Merchant</strong>.</li>
+      <li>Set <strong>Category</strong> to the SiBalance category to use, for example <strong>Purchases</strong>.</li>
+      <li>Leave <strong>Date</strong> blank to use the current date.</li>
+      <li>Leave <strong>Note</strong> blank unless you want a fixed note on every imported purchase.</li>
+      <li>Turn <strong>Show When Run</strong> off if that option is shown.</li>
+      <li>Save the automation.</li>
+    </ol>
+  </details>
+
+  <h3>How it works</h3>
+  <p>Once set up, eligible Apple Pay purchases can be passed to SiBalance automatically through Apple Shortcuts.</p>
+  <p>The purchase <strong>amount</strong> and <strong>merchant</strong> come from the Wallet transaction. You choose the SiBalance <strong>budget</strong> and <strong>category</strong> during setup.</p>
+  <p>SiBalance does not connect to your bank and does not access your Apple Pay account directly. The transaction information is passed to SiBalance by Apple Shortcuts.</p>
+
   <p>
     After the next eligible card tap, check that SiBalance has added
     <strong>one Purchases expense</strong> with the correct amount and merchant,
     and that Safe to Spend has decreased.
   </p>
   <p>
-    This automation responds to eligible card taps; it does not import past Wallet
-    transactions or connect SiBalance to a bank.
+    This automation responds to eligible card taps. It does not import past Wallet transactions.
   </p>
+
+  <h3>Important</h3>
+  <p>Automatically recorded Apple Pay purchases are treated as everyday spending and count against <strong>Safe to Spend</strong>.</p>
+  <p>Avoid creating a separate planned expense for spending you expect the Apple Pay automation to record, otherwise the same purchase may be counted twice.</p>
+  <p>Apple Pay imports are not automatically matched to, or converted into, Planned expenses.</p>
+  <p>If the same purchase is accidentally tracked both ways, you can delete either entry manually.</p>
 
   <hr>
 
