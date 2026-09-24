@@ -298,6 +298,10 @@ footer,
   mask-image: url("threads.svg");
 }
 
+.social-icon-bluesky {
+  mask-image: url("bluesky.svg");
+}
+
 .social-icon-tiktok {
   mask-image: url("tiktok.svg");
 }
