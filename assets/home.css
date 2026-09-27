@@ -340,6 +340,18 @@ html[data-theme="light"] .hero-lede {
   text-decoration: none;
 }
 
+.hero-store-link {
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.hero-free-label {
+  color: var(--home-text);
+  font-size: 18px;
+  font-weight: 800;
+}
+
 .hero-secondary-link:hover {
   color: var(--home-cyan);
 }
@@ -1007,34 +1019,23 @@ html[data-theme="light"] .import-steps li {
 
 .plan-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
 .plan-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--home-line);
   border-radius: 12px;
   padding: 34px;
   color: var(--home-text);
   background: rgba(18, 58, 122, 0.86);
   text-decoration: none;
-  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-}
-
-.plan-card:hover {
-  border-color: rgba(48, 215, 243, 0.58);
-  box-shadow: var(--dark-glow-shadow);
-  text-decoration: none;
-  transform: translateY(-3px);
 }
 
 html[data-theme="light"] .plan-card {
   background: rgba(255, 255, 255, 0.72);
-}
-
-html[data-theme="light"] .plan-card:hover {
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
 }
 
 .plan-card-featured {
@@ -1068,7 +1069,7 @@ html[data-theme="light"] .plan-card-featured {
 
 .plan-card ul {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   column-gap: 40px;
   gap: 11px;
   margin: 0;
@@ -1091,7 +1092,8 @@ html[data-theme="light"] .plan-card-featured {
 }
 
 .plan-card .purchase-summary-note {
-  margin: 40px 0 0;
+  margin: auto 0 0;
+  padding-top: 32px;
   color: var(--home-text) !important;
   font-weight: 750;
 }
@@ -1708,4 +1710,15 @@ html[data-theme="light"] .landing-footer {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
+}
+
+.hero-unlock-note {
+  margin: 16px 0 0;
+  color: var(--home-text);
+  font-weight: 750;
+}
+
+.plan-card .plan-description {
+  margin: 0 0 24px;
+  color: var(--home-muted);
 }
