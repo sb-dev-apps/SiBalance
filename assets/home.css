@@ -1034,6 +1034,16 @@ html[data-theme="light"] .import-steps li {
   text-decoration: none;
 }
 
+.plan-card:hover {
+  border-color: var(--home-cyan);
+  text-decoration: none;
+}
+
+.plan-card:focus-visible {
+  outline: 3px solid var(--home-cyan);
+  outline-offset: 5px;
+}
+
 html[data-theme="light"] .plan-card {
   background: rgba(255, 255, 255, 0.72);
 }
