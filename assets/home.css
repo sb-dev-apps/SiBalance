@@ -1776,6 +1776,20 @@ html[data-theme="light"] .landing-footer {
   font-weight: 750;
 }
 
+@media (min-width: 761px) {
+  .hero-unlock-note {
+    margin: 0 0 20px;
+    color: var(--home-muted);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .hero-actions {
+    align-items: flex-end;
+    gap: 24px;
+  }
+}
+
 .plan-card .plan-description {
   margin: 0 0 24px;
   color: var(--home-muted);
