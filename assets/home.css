@@ -1335,8 +1335,8 @@ html[data-theme="light"] .landing-footer {
     top: 0;
     min-height: auto;
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding-block: 38px 0;
+    gap: 28px;
+    padding-block: 32px 32px;
     text-align: center;
   }
 
@@ -1344,28 +1344,76 @@ html[data-theme="light"] .landing-footer {
     top: 0;
     max-width: 570px;
     margin-inline: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .hero-copy h1 {
-    font-size: 46px;
+    margin-bottom: 18px;
+    font-size: clamp(34px, 6vw, 46px);
+    line-height: 1.08;
   }
 
   .hero-lede {
-    font-size: 19px;
+    max-width: 440px;
+    margin: 0 auto 22px;
+    font-size: 18px;
+    line-height: 1.5;
   }
 
   .hero-actions {
     justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .hero-store-link {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-free-label {
+    font-size: 16px;
+  }
+
+  .hero-copy .hero-unlock-note {
+    order: 1;
+    max-width: 300px;
+    margin: 14px auto 0;
+    color: var(--home-muted);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-wrap: balance;
+  }
+
+  .hero-copy .purchase-note {
+    order: 2;
+    max-width: 330px;
+    margin: 12px auto 0;
+    font-size: 12px;
+    line-height: 1.5;
+    text-wrap: balance;
   }
 
   .hero-visual {
+    width: min(300px, 100%);
+    justify-self: center;
     height: auto;
     margin-bottom: 0;
     overflow: visible;
   }
 
   .hero-visual img {
-    width: 245px;
+    width: 100%;
+    /* The source image has transparent space above and below the phone. */
+    margin-block: -24%;
+  }
+
+  .hero-copy,
+  .hero-visual {
+    opacity: 1;
+    transform: none;
   }
 
   .trust-grid {
@@ -1538,25 +1586,25 @@ html[data-theme="light"] .landing-footer {
   .hero-copy h1 {
     max-width: 340px;
     margin-inline: auto;
-    margin-bottom: 20px;
-    font-size: 35px;
-    line-height: 1.06;
+    margin-bottom: 18px;
+    font-size: 36px;
+    line-height: 1.08;
   }
 
   .hero-lede {
     max-width: 340px;
     margin-inline: auto;
     margin-bottom: 22px;
-    font-size: 18px;
-    line-height: 1.45;
+    font-size: 17px;
+    line-height: 1.5;
     text-wrap: balance;
   }
 
   .hero-copy .purchase-note {
     max-width: 330px;
-    margin: 24px auto 0;
-    font-size: 13px;
-    line-height: 1.45;
+    margin: 12px auto 0;
+    font-size: 12px;
+    line-height: 1.5;
     text-wrap: balance;
   }
 
