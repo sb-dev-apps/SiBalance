@@ -117,7 +117,8 @@
       border-top: 1px solid var(--dark-border);
     }
 
-    .support-options a {
+    .support-options a,
+    .support-option-info {
       display: grid;
       grid-template-columns: 34px minmax(0, 1fr) auto;
       align-items: center;
@@ -127,7 +128,8 @@
       text-decoration: none;
     }
 
-    .support-options a:hover .support-option-title {
+    .support-options a:hover .support-option-title,
+    .support-option-info:hover .support-option-title {
       color: var(--dark-cyan);
     }
 
@@ -135,6 +137,10 @@
       color: var(--dark-cyan);
       font-size: 1.25rem;
       text-align: center;
+    }
+
+    .support-option-icon.independent-heart {
+      font-size: 1.25rem;
     }
 
     .support-option-copy {
@@ -166,7 +172,8 @@
     }
 
     html[data-theme="light"] .about-story blockquote p,
-    html[data-theme="light"] .support-options a {
+    html[data-theme="light"] .support-options a,
+    html[data-theme="light"] .support-option-info {
       color: #071734;
     }
 
@@ -188,7 +195,8 @@
         font-size: 1.05rem;
       }
 
-      .support-options a {
+      .support-options a,
+      .support-option-info {
         grid-template-columns: 28px minmax(0, 1fr) auto;
         gap: 10px;
       }
@@ -275,7 +283,7 @@
       <section class="support-section" aria-labelledby="support-heading">
         <p class="support-kicker">Help the app grow</p>
         <h2 id="support-heading">Support SiBalance</h2>
-        <p>If you've found SiBalance useful and would like to support its continued development, the best ways are to leave a review or recommend it to someone else.</p>
+        <p>If you've found SiBalance useful and would like to support its continued development, you can leave a review, recommend it to someone else, or leave an optional tip in the app.</p>
 
         <ul class="support-options" aria-label="Ways to support SiBalance">
           <li>
@@ -297,6 +305,15 @@
               </span>
               <span class="support-option-arrow" aria-hidden="true">›</span>
             </a>
+          </li>
+          <li>
+            <div class="support-option-info">
+              <span class="support-option-icon independent-heart" aria-hidden="true">♥</span>
+              <span class="support-option-copy">
+                <span class="support-option-title">Leave an optional tip</span>
+                <span class="support-option-detail">Support SiBalance directly from the app in Settings → Help &amp; Support → Support SiBalance.</span>
+              </span>
+            </div>
           </li>
         </ul>
       </section>
